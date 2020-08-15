@@ -9,8 +9,12 @@
     <string name="btn_view">View</string>
     <string name="event_name_create">Event Name</string>
     <string name="table_filed_id">ID</string>
-    <string name="table_filed_name">NAME</string>
+    <string name="table_filed_name">Attendee Name</string>
     <string name="table_filed_status">STATUS</string>
+    <string name="attendee_name_example">Attendee-1-Example</string>
+    <string name="attendee_date_example">2020 Aug 30</string>
+    <string name="attendee_time_example">10:30:56 AM</string>
+    <string name="attendee_remark_Example">Xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx.</string>
 
     <string name="attendee_name">Name</string>
     <string name="attendee_date">Date</string>

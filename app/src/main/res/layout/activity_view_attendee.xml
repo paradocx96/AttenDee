@@ -7,19 +7,29 @@
     android:background="@drawable/abstract_02_white"
     tools:context=".ViewAttendeeActivity">
 
-    <TableRow
-        android:id="@+id/table_event_view2"
-        android:layout_width="363dp"
-        android:layout_height="367dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="20dp"
-        android:background="@drawable/custom_button"
+    <TextView
+        android:id="@+id/recBox2"
+        android:layout_width="361dp"
+        android:layout_height="344dp"
+        android:background="@drawable/box"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.955" />
+        app:layout_constraintVertical_bias="0.891" />
+
+    <TextView
+        android:id="@+id/attendeeRemark_Example4"
+        android:layout_width="152dp"
+        android:layout_height="66dp"
+        android:text="@string/attendee_remark_Example"
+        android:textColor="#272525"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.878" />
 
     <Button
         android:id="@+id/btn_add2"
@@ -39,8 +49,7 @@
         android:id="@+id/txt_EventName2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/custom_button"
-        android:text="@string/event_name_create"
+        android:text="@string/event_name_example"
         android:textColor="#000000"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -156,6 +165,19 @@
         app:layout_constraintVertical_bias="0.685" />
 
     <TextView
+        android:id="@+id/attendeeTime_Example2"
+        android:layout_width="131dp"
+        android:layout_height="25dp"
+        android:text="@string/attendee_time_example"
+        android:textColor="#272525"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.754" />
+
+    <TextView
         android:id="@+id/attendeeTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -197,4 +219,30 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.625" />
+
+    <TextView
+        android:id="@+id/attendeeName_Example1"
+        android:layout_width="131dp"
+        android:layout_height="25dp"
+        android:text="@string/attendee_name_example"
+        android:textColor="#272525"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.616" />
+
+    <TextView
+        android:id="@+id/attendeeDate_Example"
+        android:layout_width="131dp"
+        android:layout_height="25dp"
+        android:text="@string/attendee_date_example"
+        android:textColor="#272525"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.686" />
 </androidx.constraintlayout.widget.ConstraintLayout>

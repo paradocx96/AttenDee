@@ -7,20 +7,16 @@
     android:background="@drawable/abstract_02_white"
     tools:context=".DeleteEventActivity">
 
-    <TableRow
-        android:id="@+id/table_event_view2"
-        android:layout_width="371dp"
+    <TextView
+        android:id="@+id/recBox4"
+        android:layout_width="361dp"
         android:layout_height="280dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="20dp"
-        android:background="@drawable/custom_button"
+        android:background="@drawable/box"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.767" />
+        app:layout_constraintVertical_bias="0.771" />
 
     <Button
         android:id="@+id/btn_add7"

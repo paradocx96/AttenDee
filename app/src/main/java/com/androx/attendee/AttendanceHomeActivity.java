@@ -14,7 +14,7 @@ public class AttendanceHomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_attendance_home);
 
-        Button btn1 = (Button) findViewById(R.id.btn_view);
+        Button btn1 = (Button) findViewById(R.id.btn_attendee_example1);
 
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override

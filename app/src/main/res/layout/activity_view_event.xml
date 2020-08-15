@@ -8,6 +8,17 @@
     tools:context=".ViewEventActivity">
 
     <TextView
+        android:id="@+id/recBox7"
+        android:layout_width="361dp"
+        android:layout_height="340dp"
+        android:background="@drawable/box"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.897" />
+
+    <TextView
         android:id="@+id/appName6"
         android:layout_width="214dp"
         android:layout_height="74dp"
@@ -23,20 +34,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
-
-    <TableRow
-        android:id="@+id/table_event_view2"
-        android:layout_width="363dp"
-        android:layout_height="367dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="20dp"
-        android:background="@drawable/custom_button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.955" />
 
     <Button
         android:id="@+id/btn_add6"
@@ -56,7 +53,6 @@
         android:id="@+id/txt_EventName5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/custom_button"
         android:text="@string/event_name_example"
         android:textColor="#000000"
         android:textSize="30sp"
@@ -145,7 +141,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/event_view_date_example"
-        android:textColor="#000000"
+        android:textColor="#393535"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -175,7 +171,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/event_name_example"
-        android:textColor="#000000"
+        android:textColor="#393535"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -202,19 +198,19 @@
 
     <TextView
         android:id="@+id/eventDescription2"
-        android:layout_width="150dp"
-        android:layout_height="97dp"
+        android:layout_width="154dp"
+        android:layout_height="54dp"
         android:text="@string/event_view_description_Example"
         android:textAlignment="gravity"
-        android:textColor="#000000"
+        android:textColor="#393535"
         android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.865"
+        app:layout_constraintHorizontal_bias="0.883"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.919" />
+        app:layout_constraintVertical_bias="0.861" />
 
     <Button
         android:id="@+id/btn_option2"

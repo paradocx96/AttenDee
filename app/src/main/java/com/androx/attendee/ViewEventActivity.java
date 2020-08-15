@@ -15,11 +15,20 @@ public class ViewEventActivity extends AppCompatActivity {
         setContentView(R.layout.activity_view_event);
 
         Button btn1 = (Button) findViewById(R.id.btn_view6);
+        Button btn2 = (Button) findViewById(R.id.btn_option2);
 
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ViewEventActivity.this, AttendanceHomeActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ViewEventActivity.this, OptionEventActivity.class);
                 startActivity(intent);
             }
         });

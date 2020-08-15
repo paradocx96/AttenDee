@@ -7,35 +7,31 @@
     android:background="@drawable/abstract_02_white"
     tools:context=".DeleteAttendeeActivity">
 
-    <TableRow
-        android:id="@+id/table_event_view2"
-        android:layout_width="371dp"
+    <TextView
+        android:id="@+id/recBox3"
+        android:layout_width="361dp"
         android:layout_height="280dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="20dp"
-        android:background="@drawable/custom_button"
+        android:background="@drawable/box"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.767" />
+        app:layout_constraintVertical_bias="0.771" />
 
     <TextView
         android:id="@+id/attendeeName2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/attendee_name"
+        android:text="@string/attendee_name_example"
         android:textColor="#000000"
         android:textSize="18sp"
         android:textStyle=""
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.101"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.615" />
+        app:layout_constraintVertical_bias="0.613" />
 
     <Button
         android:id="@+id/btn_add4"
@@ -55,7 +51,7 @@
         android:id="@+id/txt_EventName4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/event_name_create"
+        android:text="@string/event_name_example"
         android:textColor="#000000"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
