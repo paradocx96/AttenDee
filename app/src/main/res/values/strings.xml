@@ -24,4 +24,11 @@
     <string name="yes_delete">Yes</string>
     <string name="No_delete">No</string>
 
+    <string name="event_name_example">Event-1-Example</string>
+    <string name="event_view_name">Event Name</string>
+    <string name="event_view_date">Commencement Date</string>
+    <string name="event_view_date_example">2020 Agu 30</string>
+    <string name="event_view_description">Description</string>
+    <string name="event_view_description_Example">Xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx.</string>
+
 </resources>

@@ -24,7 +24,7 @@ public class EventHomeActivity extends AppCompatActivity {
             }
         });
 
-        Button btn2 = (Button) findViewById(R.id.btn_homeEvent_view);
+        Button btn2 = (Button) findViewById(R.id.btn_homeEvent_e1);
 
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override

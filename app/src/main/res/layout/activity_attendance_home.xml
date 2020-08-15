@@ -143,7 +143,7 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <TableRow
-        android:id="@+id/tableView"
+        android:id="@+id/table_event_view2"
         android:layout_width="370dp"
         android:layout_height="191dp"
         android:layout_marginStart="20dp"
