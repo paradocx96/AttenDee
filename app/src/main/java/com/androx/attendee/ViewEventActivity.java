@@ -25,7 +25,7 @@ public class ViewEventActivity extends AppCompatActivity {
             }
         });
 
-        btn1.setOnClickListener(new View.OnClickListener() {
+        btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ViewEventActivity.this, OptionEventActivity.class);
