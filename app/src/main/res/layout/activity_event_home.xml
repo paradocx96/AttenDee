@@ -4,6 +4,56 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EventHomeActivity">
+    android:background="@drawable/abstract_02_white"
+    tools:context=".EventHomeActivity" >
 
+    <Button
+        android:id="@+id/button16"
+        android:layout_width="124dp"
+        android:layout_height="43dp"
+        android:background="@drawable/custom_button"
+        android:text="ABOUT US"
+        android:textColor="@android:color/holo_purple"
+        android:textColorLink="@color/colorPrimaryDark"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.944"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.293"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/button17"
+        android:layout_width="124dp"
+        android:layout_height="43dp"
+        android:background="@drawable/custom_button"
+        android:text="ATTENDANCE"
+        android:textColor="@android:color/holo_purple"
+        android:textColorLink="@color/colorPrimaryDark"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="143dp"
+        tools:layout_editor_absoluteY="202dp" />
+
+    <Button
+        android:id="@+id/button18"
+        android:layout_width="124dp"
+        android:layout_height="43dp"
+        android:background="@drawable/custom_button"
+        android:shadowColor="#00BCD4"
+        android:text="EVENT"
+        android:textColor="@android:color/holo_purple"
+        android:textColorLink="@color/colorPrimaryDark"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.055"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.293"
+        tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>
