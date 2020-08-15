@@ -3,4 +3,20 @@
     <string name="event_name">Event</string>
     <string name="setting_name">Setting</string>
     <string name="aboutus_name">About Us</string>
+
+    <string name="btn1_main_menu">Event</string>
+    <string name="btn2_main_menu">Attendance</string>
+    <string name="btn3_main_menu">About Us</string>
+
+    <string name="btn4_main_menu">- Add -</string>
+    <string name="btn5_main_menu">- View -</string>
+
+    <string name="add_person_name">Person name</string>
+    <string name="add_date">Date</string>
+    <string name="add_time">Time</string>
+    <string name="add_remarks">Remarks</string>
+
+    <string name="add_person_button">Add Person</string>
+    <string name="saveChanges_button">Save Changes</string>
+
 </resources>
