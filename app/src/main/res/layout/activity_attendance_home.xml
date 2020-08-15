@@ -4,16 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/abstract_02_white"
     tools:context=".AttendanceHomeActivity">
 
     <Button
         android:id="@+id/btn_aboutus"
-        android:layout_width="104dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="20dp"
+        android:layout_width="124dp"
+        android:layout_height="43dp"
+        android:background="@drawable/custom_button"
         android:text="@string/aboutus_name"
-        app:layout_constraintBaseline_toBaselineOf="@+id/btn_attendance"
-        app:layout_constraintStart_toEndOf="@+id/btn_attendance" />
+        android:textColor="@android:color/holo_purple"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.944"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.295" />
 
     <TextView
         android:id="@+id/appName"
@@ -23,17 +29,22 @@
         android:fontFamily="@font/lobster"
         android:text="@string/app_name"
         android:textAlignment="center"
+        android:textColor="#000000"
         android:textSize="60sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/btn_attendance"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="124dp"
+        android:layout_height="43dp"
+        android:background="@drawable/custom_button"
         android:text="@string/attendance_name"
+        android:textColor="@android:color/holo_purple"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -42,18 +53,25 @@
 
     <Button
         android:id="@+id/btn_event"
-        android:layout_width="104dp"
-        android:layout_height="48dp"
-        android:layout_marginEnd="20dp"
+        android:layout_width="124dp"
+        android:layout_height="43dp"
+        android:background="@drawable/custom_button"
         android:text="@string/event_name"
-        app:layout_constraintBaseline_toBaselineOf="@+id/btn_attendance"
-        app:layout_constraintEnd_toStartOf="@+id/btn_attendance" />
+        android:textColor="@android:color/holo_purple"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.055"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.295" />
 
     <Button
         android:id="@+id/btn_add"
-        android:layout_width="90dp"
-        android:layout_height="45dp"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:background="@drawable/custom_button_2"
         android:text="@string/btn_add"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.305"
@@ -63,9 +81,11 @@
 
     <Button
         android:id="@+id/btn_view"
-        android:layout_width="90dp"
-        android:layout_height="45dp"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:background="@drawable/custom_button_2"
         android:text="@string/btn_view"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.691"
@@ -79,6 +99,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="356dp"
         android:text="@string/event_name_create"
+        android:textColor="#000000"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -91,7 +112,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
         android:text="@string/table_filed_id"
-        android:textColor="#070707"
+        android:textColor="#000000"
+        android:textSize="18sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/tableName"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -100,7 +122,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/table_filed_name"
-        android:textColor="#020202"
+        android:textColor="#000000"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/tableststus"
         app:layout_constraintHorizontal_bias="0.312"
@@ -115,17 +138,18 @@
         android:layout_marginEnd="56dp"
         android:text="@string/table_filed_status"
         android:textColor="#000000"
+        android:textSize="18sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/tableName"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <TableRow
         android:id="@+id/tableView"
-        android:layout_width="373dp"
-        android:layout_height="190dp"
+        android:layout_width="370dp"
+        android:layout_height="191dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="20dp"
-        android:background="#CDCDCD"
+        android:background="@drawable/custom_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
