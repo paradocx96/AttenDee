@@ -3,4 +3,25 @@
     <string name="event_name">Event</string>
     <string name="setting_name">Setting</string>
     <string name="aboutus_name">About Us</string>
+
+    <string name="attendance_name">Attendance</string>
+    <string name="btn_add">Add</string>
+    <string name="btn_view">View</string>
+    <string name="event_name_create">Event Name</string>
+    <string name="table_filed_id">ID</string>
+    <string name="table_filed_name">NAME</string>
+    <string name="table_filed_status">STATUS</string>
+
+    <string name="attendee_name">Name</string>
+    <string name="attendee_date">Date</string>
+    <string name="attendee_time">Time</string>
+    <string name="attendee_remark">Remark</string>
+
+    <string name="option_edit">Edit</string>
+    <string name="option_delete">Delete</string>
+
+    <string name="confirm_delete">Are you sure want to delete?</string>
+    <string name="yes_delete">Yes</string>
+    <string name="No_delete">No</string>
+
 </resources>

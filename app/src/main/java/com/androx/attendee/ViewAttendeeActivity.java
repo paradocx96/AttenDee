@@ -7,19 +7,19 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class HomepageActivity extends AppCompatActivity {
+public class ViewAttendeeActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_homepage);
+        setContentView(R.layout.activity_view_attendee);
 
-        Button btn1 = (Button) findViewById(R.id.btn_Event1);
+        Button btn1 = (Button) findViewById(R.id.btn_option);
 
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomepageActivity.this, AttendanceHomeActivity.class);
+                Intent intent = new Intent(ViewAttendeeActivity.this, OptionAttendeeActivity.class);
                 startActivity(intent);
             }
         });
