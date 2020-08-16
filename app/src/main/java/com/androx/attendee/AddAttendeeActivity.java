@@ -105,7 +105,7 @@ public class AddAttendeeActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(AddAttendeeActivity.this, EditEventActivity.class);
+                Intent intent = new Intent(AddAttendeeActivity.this, EditAttendeeActivity.class);
                 startActivity(intent);
 
                 button5.setBackgroundColor(Color.parseColor("#ff9100"));

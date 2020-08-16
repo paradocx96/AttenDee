@@ -16,7 +16,7 @@ public class EditAttendeeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_attendee);
+        setContentView(R.layout.activity_edit_attendee);
 
         button1 = (Button) findViewById(R.id.btn1_menu);
         button2 = (Button) findViewById(R.id.btn2_menu);
