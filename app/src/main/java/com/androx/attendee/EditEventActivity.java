@@ -11,7 +11,6 @@ public class EditEventActivity extends AppCompatActivity {
 
     private Button eventsButton;
     private Button addEventButton;
-    private Button editEventButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
