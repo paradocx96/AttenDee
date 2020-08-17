@@ -3,6 +3,11 @@
     <string name="event_name">Event</string>
     <string name="setting_name">Setting</string>
     <string name="aboutus_name">About Us</string>
+
+    <string name="new_event_name">Event Name</string>
+    <string name="event_date">Date</string>
+    <string name="event_remark">Remark</string>
+
   
     <string name="btn1_main_menu">Event</string>
     <string name="btn2_main_menu">Attendance</string>
