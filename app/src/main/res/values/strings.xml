@@ -3,7 +3,7 @@
     <string name="event_name">Event</string>
     <string name="setting_name">Setting</string>
     <string name="aboutus_name">About Us</string>
-
+  
     <string name="btn1_main_menu">Event</string>
     <string name="btn2_main_menu">Attendance</string>
     <string name="btn3_main_menu">About Us</string>
@@ -18,5 +18,36 @@
 
     <string name="add_person_button">Add Person</string>
     <string name="saveChanges_button">Save Changes</string>
+
+    <string name="attendance_name">Attendance</string>
+    <string name="btn_add">Add</string>
+    <string name="btn_view">View</string>
+    <string name="event_name_create">Event Name</string>
+    <string name="table_filed_id">ID</string>
+    <string name="table_filed_name">Attendee Name</string>
+    <string name="table_filed_status">STATUS</string>
+    <string name="attendee_name_example">Attendee-1-Example</string>
+    <string name="attendee_date_example">2020 Aug 30</string>
+    <string name="attendee_time_example">10:30:56 AM</string>
+    <string name="attendee_remark_Example">Xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx.</string>
+
+    <string name="attendee_name">Name</string>
+    <string name="attendee_date">Date</string>
+    <string name="attendee_time">Time</string>
+    <string name="attendee_remark">Remark</string>
+
+    <string name="option_edit">Edit</string>
+    <string name="option_delete">Delete</string>
+
+    <string name="confirm_delete">Are you sure want to delete?</string>
+    <string name="yes_delete">Yes</string>
+    <string name="No_delete">No</string>
+
+    <string name="event_name_example">Event-1-Example</string>
+    <string name="event_view_name">Event Name</string>
+    <string name="event_view_date">Commencement Date</string>
+    <string name="event_view_date_example">2020 Agu 30</string>
+    <string name="event_view_description">Description</string>
+    <string name="event_view_description_Example">Xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx.</string>
 
 </resources>
