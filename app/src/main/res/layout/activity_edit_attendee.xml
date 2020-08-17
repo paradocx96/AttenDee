@@ -21,6 +21,7 @@
         app:layout_constraintTop_toBottomOf="@+id/btn4_menu"
         app:layout_constraintVertical_bias="0.802"></LinearLayout>
 
+
     <Button
         android:id="@+id/btn2_menu"
         android:layout_width="120dp"
@@ -34,48 +35,32 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
 
-
-    <Button
-        android:id="@+id/btn4_menu"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_marginStart="108dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/button_curve_2nd_navi"
-        android:text="@string/btn4_main_menu"
-        android:textColor="@color/colorWhite"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn2_menu" />
-
-    <Button
-        android:id="@+id/btn1_menu"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="104dp"
-        android:background="@drawable/button_curve"
-        android:text="@string/btn1_main_menu"
-        android:textColor="@color/colorWhite"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/btn2_menu"
-        app:layout_constraintHorizontal_bias="0.612"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <Button
         android:id="@+id/btn5_menu"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
-        android:layout_marginEnd="112dp"
+        android:layout_marginEnd="105dp"
         android:background="@drawable/button_curve_2nd_navi"
         android:text="@string/btn5_main_menu"
         android:textColor="@color/colorWhite"
         android:textStyle="bold"
         app:layout_constraintBaseline_toBaselineOf="@+id/btn4_menu"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.733"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/btn4_menu" />
+
+    <Button
+        android:id="@+id/btn4_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="105dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_curve_2nd_navi"
+        android:text="@string/btn4_main_menu"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn2_menu" />
 
     <Button
         android:id="@+id/btn3_menu"
@@ -90,6 +75,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btn2_menu" />
 
+    <Button
+        android:id="@+id/btn1_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="184dp"
+        android:background="@drawable/button_curve"
+        android:text="@string/btn1_main_menu"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/btn2_menu"
+        app:layout_constraintHorizontal_bias="0.612"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <EditText
@@ -221,17 +220,15 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView
-        android:id="@+id/textView3"
-        android:layout_width="197dp"
-        android:layout_height="137dp"
+        android:id="@+id/logo_view10"
+        android:layout_width="389dp"
+        android:layout_height="233dp"
         android:background="@drawable/common_logo"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.485"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

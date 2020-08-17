@@ -15,11 +15,20 @@ public class AttendanceHomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_attendance_home);
 
         Button btn1 = (Button) findViewById(R.id.btn_attendee_example1);
+        Button btn2 = (Button) findViewById(R.id.btn_add);
 
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(AttendanceHomeActivity.this, ViewAttendeeActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AttendanceHomeActivity.this, AddAttendeeActivity.class);
                 startActivity(intent);
             }
         });

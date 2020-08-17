@@ -4,9 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/abstract_02_white"
+    android:background="@drawable/common_background"
     android:contentDescription="@string/event_name"
     tools:context=".EventHomeActivity">
+
+    <TextView
+        android:id="@+id/logo_view2"
+        android:layout_width="389dp"
+        android:layout_height="233dp"
+        android:background="@drawable/common_logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TableRow
         android:id="@+id/table_event_view2"
@@ -30,32 +41,15 @@
             android:text="@string/event_name_example" />
     </TableRow>
 
-    <TextView
-        android:id="@+id/appName5"
-        android:layout_width="214dp"
-        android:layout_height="74dp"
-        android:layout_marginTop="80dp"
-        android:fontFamily="@font/lobster"
-        android:text="@string/app_name"
-        android:textAlignment="center"
-        android:textColor="#020202"
-        android:textSize="60sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
     <Button
         android:id="@+id/btn_homeEvent_add"
         android:layout_width="124dp"
         android:layout_height="43dp"
         android:layout_marginStart="75dp"
-        android:background="@drawable/custom_button"
+        android:background="@drawable/button_curve_2nd_navi"
         android:shadowColor="#00BCD4"
         android:text="@string/btn_add"
-        android:textColor="@android:color/holo_purple"
+        android:textColor="#FFFFFF"
         android:textColorLink="@color/colorPrimaryDark"
         android:textSize="12sp"
         android:textStyle="bold"
@@ -71,7 +65,7 @@
         android:id="@+id/btn_homeEvent_abus"
         android:layout_width="80dp"
         android:layout_height="40dp"
-        android:background="@drawable/custom_button_2"
+        android:background="@drawable/button_curve"
         android:text="@string/aboutus_name"
         android:textColor="#FFFFFF"
         android:textColorLink="@color/colorPrimaryDark"
@@ -90,7 +84,7 @@
         android:layout_width="124dp"
         android:layout_height="43dp"
         android:layout_marginStart="75dp"
-        android:background="@drawable/custom_button_2"
+        android:background="@drawable/button_curve"
         android:shadowColor="#00BCD4"
         android:text="@string/event_name"
         android:textColor="#FFFFFF"

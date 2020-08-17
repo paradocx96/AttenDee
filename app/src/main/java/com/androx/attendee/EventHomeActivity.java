@@ -15,6 +15,7 @@ public class EventHomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_event_home);
 
         Button btn1 = (Button) findViewById(R.id.btn_homeEvent_add);
+        Button btn2 = (Button) findViewById(R.id.btn_homeEvent_e1);
 
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -23,8 +24,6 @@ public class EventHomeActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-        Button btn2 = (Button) findViewById(R.id.btn_homeEvent_e1);
 
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
