@@ -4,14 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/common_background"
     tools:context=".HomepageActivity">
 
     <Button
         android:id="@+id/btn_Event1"
         android:layout_width="225dp"
         android:layout_height="60dp"
-        android:layout_marginTop="408dp"
+        android:background="@drawable/button_curve"
         android:text="@string/event_name"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -20,36 +23,39 @@
         android:id="@+id/btn_Aboutus1"
         android:layout_width="225dp"
         android:layout_height="60dp"
-        android:layout_marginTop="40dp"
+        android:background="@drawable/button_curve"
         android:text="@string/aboutus_name"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_Event1" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.66" />
 
     <Button
         android:id="@+id/btn_Setting1"
         android:layout_width="225dp"
         android:layout_height="60dp"
-        android:layout_marginTop="40dp"
+        android:background="@drawable/button_curve"
         android:text="@string/setting_name"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_Aboutus1" />
+        app:layout_constraintTop_toTopOf="@+id/imageView4"
+        app:layout_constraintVertical_bias="0.819" />
 
-    <TextView
-        android:id="@+id/appName1"
-        android:layout_width="214dp"
-        android:layout_height="74dp"
-        android:layout_marginTop="176dp"
-        android:fontFamily="@font/lobster"
-        android:text="@string/app_name"
-        android:textAlignment="center"
-        android:textSize="60sp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_Event1"
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="350dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.037" />
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/logo_internal" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
