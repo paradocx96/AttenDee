@@ -8,7 +8,7 @@
     tools:context=".EditEventActivity">
 
     <Button
-        android:id="@+id/btn_Aboutus1"
+        android:id="@+id/button6"
         android:layout_width="124dp"
         android:layout_height="43dp"
         android:background="@drawable/custom_button"
@@ -17,12 +17,12 @@
         android:textColorLink="@color/colorPrimaryDark"
         android:textSize="10sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/button8"
+        app:layout_constraintBottom_toBottomOf="@+id/button5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintHorizontal_bias="0.523"
         app:layout_constraintStart_toEndOf="@+id/button5"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.353" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/button5"
@@ -36,13 +36,13 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.731" />
+        app:layout_constraintVertical_bias="0.734" />
 
     <Button
-        android:id="@+id/event"
+        android:id="@+id/events"
         android:layout_width="124dp"
         android:layout_height="43dp"
         android:background="@drawable/custom_button"
@@ -58,7 +58,7 @@
         app:layout_constraintTop_toTopOf="@+id/button5" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/ADD"
         android:layout_width="124dp"
         android:layout_height="43dp"
         android:background="@drawable/custom_button_2"
@@ -69,9 +69,9 @@
         android:textSize="10sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/button6"
         app:layout_constraintHorizontal_bias="0.85"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/button6"
         app:layout_constraintTop_toBottomOf="@+id/editTextDate"
         app:layout_constraintVertical_bias="0.538" />
 
@@ -82,12 +82,14 @@
         android:ems="10"
         android:gravity="start|top"
         android:hint="Remark"
-        android:textStyle="bold"
         android:inputType="textMultiLine"
-        app:layout_constraintBottom_toTopOf="@+id/button8"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextDate" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextDate"
+        app:layout_constraintVertical_bias="0.145" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/textInputEditText2"
@@ -99,39 +101,42 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.535" />
+        app:layout_constraintTop_toBottomOf="@+id/button5"
+        app:layout_constraintVertical_bias="0.325" />
 
     <EditText
         android:id="@+id/editTextDate"
         android:layout_width="307dp"
         android:layout_height="45dp"
-        android:layout_marginTop="32dp"
         android:ems="10"
         android:hint="Date"
-        android:textStyle="bold"
         android:inputType="date"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputEditText2" />
+        app:layout_constraintTop_toBottomOf="@+id/textInputEditText2"
+        app:layout_constraintVertical_bias="0.119" />
 
     <Button
-        android:id="@+id/view"
+        android:id="@+id/ViewEvents"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="48dp"
+        android:layout_marginTop="394dp"
         android:background="@drawable/custom_button_2"
         android:text="View"
         android:textColor="@color/cardview_light_background"
         android:textColorLink="@color/colorPrimaryDark"
         android:textSize="10sp"
-        app:layout_constraintBottom_toBottomOf="@+id/edit"
+        app:layout_constraintBottom_toBottomOf="@+id/EditEvent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.31"
-        app:layout_constraintStart_toEndOf="@+id/button4"
-        app:layout_constraintTop_toTopOf="@+id/edit"
-        app:layout_constraintVertical_bias="0.022" />
+        app:layout_constraintHorizontal_bias="0.369"
+        app:layout_constraintStart_toEndOf="@+id/EditEvent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -145,24 +150,22 @@
         tools:layout_editor_absoluteY="-114dp" />
 
     <Button
-        android:id="@+id/add"
+        android:id="@+id/AddNewEvent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
         android:background="@drawable/custom_button_2"
         android:text="Add"
         android:textColor="@color/cardview_light_background"
         android:textColorLink="@color/colorPrimaryDark"
         android:textSize="10sp"
-        app:layout_constraintBottom_toBottomOf="@+id/edit"
-        app:layout_constraintEnd_toStartOf="@+id/button4"
+        app:layout_constraintBottom_toBottomOf="@+id/EditEvent"
+        app:layout_constraintEnd_toStartOf="@+id/EditEvent"
         app:layout_constraintHorizontal_bias="0.698"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button3"
-        app:layout_constraintVertical_bias="0.094" />
+        app:layout_constraintTop_toTopOf="@+id/EditEvent" />
 
     <Button
-        android:id="@+id/edit"
+        android:id="@+id/EditEvent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/custom_button_2"
@@ -171,7 +174,8 @@
         android:textColorLink="@color/colorPrimaryDark"
         android:textSize="10sp"
         app:layout_constraintBottom_toTopOf="@+id/textInputEditText2"
-        app:layout_constraintTop_toBottomOf="@+id/button5"
-        tools:layout_editor_absoluteX="161dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
