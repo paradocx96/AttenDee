@@ -44,7 +44,6 @@ class MyDatabaseHelper extends SQLiteOpenHelper {
     }
 
     void addAttendence(String name, String date, String time, String remarks){
-
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
 
@@ -54,7 +53,6 @@ class MyDatabaseHelper extends SQLiteOpenHelper {
         cv.put(COLUMN_TIME, remarks);
 
         long result = db.insert(TABLE_NAME,null, cv);
-
         if(result == -1){
             Toast.makeText(context, "Failed", Toast.LENGTH_SHORT).show();
         }else {
@@ -63,7 +61,6 @@ class MyDatabaseHelper extends SQLiteOpenHelper {
     }
 
     Cursor readAllData(){
-
         String query = "SELECT * FROM " + TABLE_NAME;
         SQLiteDatabase db = this.getReadableDatabase();
 
@@ -75,7 +72,6 @@ class MyDatabaseHelper extends SQLiteOpenHelper {
     }
 
     void updateAttendance(String row_id, String name, String date, String time, String remarks){
-
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
 
