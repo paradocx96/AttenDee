@@ -22,6 +22,7 @@
         <activity android:name=".EditEventActivity" />
         <activity android:name=".AddEventActivity" />
         <activity android:name=".HomepageActivity" />
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

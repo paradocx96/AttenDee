@@ -16,12 +16,20 @@ public class HomepageActivity extends AppCompatActivity {
         setContentView(R.layout.activity_homepage);
 
         Button btn1 = (Button) findViewById(R.id.btn_Event1);
-      
+        Button btn2 = (Button) findViewById(R.id.btn_Aboutus1);
+
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(HomepageActivity.this, EventHomeActivity.class);
                 startActivity(intent);
+            }
+        });
+
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(HomepageActivity.this, AddAttendeeActivity.class));
             }
         });
     }
