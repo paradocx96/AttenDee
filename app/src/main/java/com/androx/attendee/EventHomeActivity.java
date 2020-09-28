@@ -16,6 +16,7 @@ public class EventHomeActivity extends AppCompatActivity {
 
         Button btn1 = (Button) findViewById(R.id.btn_homeEvent_add);
         Button btn2 = (Button) findViewById(R.id.btn_homeEvent_e1);
+        Button btn3 = (Button) findViewById(R.id.btn_attendance);
 
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -29,6 +30,14 @@ public class EventHomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(EventHomeActivity.this, ViewEventActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btn3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(EventHomeActivity.this, AddAttendeeActivity.class);
                 startActivity(intent);
             }
         });

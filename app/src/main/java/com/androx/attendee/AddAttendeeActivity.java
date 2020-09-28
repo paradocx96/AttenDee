@@ -2,16 +2,26 @@ package com.androx.attendee;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+
 
 public class AddAttendeeActivity extends AppCompatActivity {
 
-    Button button1, button2, button3, button4, button5, button6;
-
+    private Button button1, button2, button3, button4, button5;
+    private EditText remarks, name;
+    private Button addAttendBtn;
+    private Context context;
+    private MyDatabaseHelper myDatabaseHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +33,12 @@ public class AddAttendeeActivity extends AppCompatActivity {
         button3 = (Button) findViewById(R.id.btn3_menu);
         button4 = (Button) findViewById(R.id.btn4_menu);
         button5 = (Button) findViewById(R.id.btn5_menu);
-        button6 = (Button) findViewById(R.id.addAttendBtn);
+        addAttendBtn = (Button) findViewById(R.id.addAttendBtn);
+        name = findViewById(R.id.editTxt_personName);
+        remarks = findViewById(R.id.editTxt_remarks);
+
+        context = this;
+        myDatabaseHelper = new MyDatabaseHelper(context);
 
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -118,16 +133,24 @@ public class AddAttendeeActivity extends AppCompatActivity {
             }
         });
 
-       /* button6.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
+        addAttendBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
-                    button6.setBackgroundColor(Color.parseColor("#ffffff"));
-                    button6.setTextColor(Color.parseColor("#0a8f08"));
+                String personName = name.getText().toString();
+                String personRemarks = remarks.getText().toString();
+//                Date currentTime = Calendar.getInstance().getTime();
+//                String dateTime = currentTime.toString();
+                SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd-HH:mm:ss", Locale.getDefault());
+                String dateTime = sdf.format(new Date());
 
-                }
-        }); */
 
+                Attendance attendance = new Attendance(personName,dateTime,personRemarks);
+                myDatabaseHelper.addAttendence(attendance);
+
+                startActivity(new Intent(AddAttendeeActivity.this,AttendanceHomeActivity.class));
+            }
+        });
 
 
 

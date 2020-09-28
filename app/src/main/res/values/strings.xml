@@ -17,8 +17,6 @@
     <string name="btn5_main_menu">- View -</string>
 
     <string name="add_person_name">Person name</string>
-    <string name="add_date">Date</string>
-    <string name="add_time">Time</string>
     <string name="add_remarks">Remarks</string>
 
     <string name="add_person_button">Add Person</string>
