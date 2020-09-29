@@ -90,116 +90,111 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.402" />
 
-    <TextView
-        android:id="@+id/recBox2"
+    <LinearLayout
         android:layout_width="361dp"
         android:layout_height="344dp"
-        android:background="@drawable/box"
+        android:layout_marginTop="32dp"
+        android:background="@color/colorWhite"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.891" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_attendance2">
 
-    <TextView
-        android:id="@+id/txt_EventName2"
-        android:layout_width="361dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="5dp"
-        android:text="@string/event_name_example"
-        android:textColor="#000000"
-        android:textSize="30sp"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/recBox2" />
+        <TextView
+            android:id="@+id/txt_EventName2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="@string/event_name_example"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="30sp" />
 
-    <Button
-        android:id="@+id/btn_option"
-        android:layout_width="32dp"
-        android:layout_height="36dp"
-        android:layout_marginTop="88dp"
-        android:drawableTop="@drawable/ic_baseline_menu_24"
-        android:textColor="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.905"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/recBox2"
-        app:layout_constraintVertical_bias="0.0" />
+        <Button
+            android:id="@+id/btn_option"
+            android:layout_width="38dp"
+            android:layout_height="36dp"
+            android:drawableTop="@drawable/ic_baseline_menu_24"
+            android:textColor="#000000"
+            android:layout_marginStart="300dp"/>
 
-    <TextView
-        android:id="@+id/attendeeName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="88dp"
-        android:text="@string/attendee_name"
-        android:textColor="#000000"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/recBox2" />
+        <TableLayout
+            android:layout_width="342dp"
+            android:layout_height="261dp"
+            android:layout_marginStart="20dp">
 
-    <TextView
-        android:id="@+id/attendeeDate"
-        android:layout_width="48dp"
-        android:layout_height="24dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="28dp"
-        android:text="@string/attendee_date"
-        android:textColor="#000000"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/attendeeName" />
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
 
-    <TextView
-        android:id="@+id/attendeeRemark"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="28dp"
-        android:text="@string/attendee_remark"
-        android:textColor="#000000"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/attendeeDate" />
+                <TextView
+                    android:id="@+id/attendeeName"
+                    android:layout_width="121dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/attendee_name"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/attendeeName_Example1"
-        android:layout_width="131dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="88dp"
-        android:text="@string/attendee_name_example"
-        android:textColor="#272525"
-        app:layout_constraintStart_toEndOf="@+id/attendeeName"
-        app:layout_constraintTop_toTopOf="@+id/recBox2" />
+                <TextView
+                    android:id="@+id/attendeeName_Example1"
+                    android:layout_width="131dp"
+                    android:layout_height="25dp"
+                    android:text="@string/attendee_name_example"
+                    android:textColor="#272525" />
 
-    <TextView
-        android:id="@+id/attendeeDate_Example"
-        android:layout_width="131dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="28dp"
-        android:text="@string/attendee_date_example"
-        android:textColor="#272525"
-        app:layout_constraintStart_toEndOf="@+id/attendeeDate"
-        app:layout_constraintTop_toBottomOf="@+id/attendeeName_Example1" />
+            </TableRow>
 
-    <TextView
-        android:id="@+id/attendeeRemark_Example4"
-        android:layout_width="152dp"
-        android:layout_height="66dp"
-        android:layout_marginStart="46dp"
-        android:layout_marginTop="28dp"
-        android:text="@string/attendee_remark_Example"
-        android:textColor="#272525"
-        app:layout_constraintEnd_toEndOf="@+id/attendeeDate_Example"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/attendeeRemark"
-        app:layout_constraintTop_toBottomOf="@+id/attendeeDate_Example" />
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/attendeeDate"
+                    android:layout_width="48dp"
+                    android:layout_height="24dp"
+                    android:text="@string/attendee_date"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/attendeeDate_Example"
+                    android:layout_width="131dp"
+                    android:layout_height="25dp"
+                    android:text="@string/attendee_date_example"
+                    android:textColor="#272525" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/attendeeRemark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/attendee_remark"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/attendeeRemark_Example4"
+                    android:layout_width="152dp"
+                    android:layout_height="66dp"
+                    android:text="@string/attendee_remark_Example"
+                    android:textColor="#272525" />
+            </TableRow>
+
+        </TableLayout>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
