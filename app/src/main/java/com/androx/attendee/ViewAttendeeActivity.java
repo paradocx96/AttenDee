@@ -29,7 +29,12 @@ public class ViewAttendeeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ViewAttendeeActivity.this, OptionAttendeeActivity.class);
+
+                Intent intent1 = new Intent(ViewAttendeeActivity.this, EditAttendeeActivity.class);
+                String id1 = getIntent().getStringExtra("id");
+                intent1.putExtra("id1", id1);
                 startActivity(intent);
+                startActivity(intent1);
             }
         });
 

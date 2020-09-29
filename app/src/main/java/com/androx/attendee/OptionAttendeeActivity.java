@@ -9,6 +9,8 @@ import android.widget.Button;
 
 public class OptionAttendeeActivity extends AppCompatActivity {
 
+    private String id;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +24,8 @@ public class OptionAttendeeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(OptionAttendeeActivity.this, EditAttendeeActivity.class);
+//                id = getIntent().getStringExtra("id");
+//                intent.putExtra("id", id);
                 startActivity(intent);
             }
         });

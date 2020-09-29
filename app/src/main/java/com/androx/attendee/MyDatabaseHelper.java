@@ -91,4 +91,28 @@ class MyDatabaseHelper extends SQLiteOpenHelper {
         return cursor;
     }
 
+    public Attendance getSingleAttendance(int id){
+
+        SQLiteDatabase db = getWritableDatabase();
+
+        Cursor cursor = db.query(TABLE_NAME, new String[]{COLUMN_ID,COLUMN_PNAME,COLUMN_DATE_TIME,COLUMN_REMARKS},
+                COLUMN_ID + "= ?",new String[]{String.valueOf(id)},
+                null,null,null);
+
+        Attendance attendance;
+
+        if(cursor != null ){
+            cursor.moveToFirst();
+            attendance = new Attendance(
+                    cursor.getInt(0),
+                    cursor.getString(1),
+                    cursor.getString(2),
+                    cursor.getString(3)
+            );
+            return attendance;
+        }
+
+        return null;
+    }
+
 }

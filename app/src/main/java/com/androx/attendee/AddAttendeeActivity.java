@@ -33,7 +33,7 @@ public class AddAttendeeActivity extends AppCompatActivity {
         button3 = (Button) findViewById(R.id.btn3_menu);
         button4 = (Button) findViewById(R.id.btn4_menu);
         button5 = (Button) findViewById(R.id.btn5_menu);
-        addAttendBtn = (Button) findViewById(R.id.addAttendBtn);
+        addAttendBtn = (Button) findViewById(R.id.addPersonBtn);
         name = findViewById(R.id.editTxt_personName);
         remarks = findViewById(R.id.editTxt_remarks);
 
