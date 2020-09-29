@@ -23,7 +23,7 @@ public class EditAttendeeActivity extends AppCompatActivity {
         button3 = (Button) findViewById(R.id.btn3_menu);
         button4 = (Button) findViewById(R.id.btn4_menu);
         button5 = (Button) findViewById(R.id.btn5_menu);
-        button6 = (Button) findViewById(R.id.saveChangesBtn);
+        //button6 = (Button) findViewById(R.id.saveChangesBtn);
 
         button1.setOnClickListener(new View.OnClickListener() {
             @Override

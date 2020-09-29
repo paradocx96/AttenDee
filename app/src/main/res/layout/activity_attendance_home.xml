@@ -8,31 +8,6 @@
     tools:context=".AttendanceHomeActivity">
 
     <TextView
-        android:id="@+id/recBox"
-        android:layout_width="361dp"
-        android:layout_height="344dp"
-        android:background="@drawable/box"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.891" />
-
-    <Button
-        android:id="@+id/btn_aboutus"
-        android:layout_width="124dp"
-        android:layout_height="43dp"
-        android:background="@drawable/button_curve"
-        android:text="@string/aboutus_name"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.944"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.295" />
-
-    <TextView
         android:id="@+id/logo_view"
         android:layout_width="389dp"
         android:layout_height="233dp"
@@ -42,6 +17,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btn_event"
+        android:layout_width="124dp"
+        android:layout_height="43dp"
+        android:background="@drawable/button_curve"
+        android:text="@string/event_name"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.055"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.295" />
 
     <Button
         android:id="@+id/btn_attendance"
@@ -57,15 +46,15 @@
         app:layout_constraintVertical_bias="0.295" />
 
     <Button
-        android:id="@+id/btn_event"
+        android:id="@+id/btn_aboutus"
         android:layout_width="124dp"
         android:layout_height="43dp"
         android:background="@drawable/button_curve"
-        android:text="@string/event_name"
+        android:text="@string/aboutus_name"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.055"
+        app:layout_constraintHorizontal_bias="0.944"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.295" />
@@ -98,43 +87,46 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.402" />
 
-    <TextView
-        android:id="@+id/txt_EventName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/event_name_example"
-        android:textColor="#000000"
-        android:textSize="30sp"
+    <LinearLayout
+        android:layout_width="378dp"
+        android:layout_height="379dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.519" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_add"
+        android:background="@color/colorWhite">
 
-    <TextView
-        android:id="@+id/tableName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/table_filed_name"
-        android:textColor="#000000"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.605" />
+        <TextView
+            android:id="@+id/txt_EventName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/event_name_example"
+            android:textColor="#000000"
+            android:textSize="30sp"
+            android:layout_marginTop="10dp"
+            android:textAlignment="center"/>
 
-    <Button
-        android:id="@+id/btn_attendee_example1"
-        android:layout_width="341dp"
-        android:layout_height="47dp"
-        android:background="@drawable/custom_button"
-        android:text="@string/attendee_name_example"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.693" />
+        <TextView
+            android:id="@+id/attendee_list_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/table_filed_name"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textAlignment="center"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/attendanceList"
+            android:layout_width="match_parent"
+            android:layout_height="287dp"
+            android:paddingTop="?attr/actionBarSize" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,7 +8,7 @@
     <string name="event_date">Date</string>
     <string name="event_remark">Remark</string>
 
-  
+
     <string name="btn1_main_menu">Event</string>
     <string name="btn2_main_menu">Attendance</string>
     <string name="btn3_main_menu">About Us</string>
@@ -33,6 +33,8 @@
     <string name="attendee_date_example">2020 Aug 30</string>
     <string name="attendee_time_example">10:30:56 AM</string>
     <string name="attendee_remark_Example">Xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx.</string>
+    <string name="attendee_id">ID</string>
+    <string name="attendee_datetime">DateTime</string>
 
     <string name="attendee_name">Name</string>
     <string name="attendee_date">Date</string>

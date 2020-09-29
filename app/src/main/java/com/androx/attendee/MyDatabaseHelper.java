@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.widget.Toast;
+
 import androidx.annotation.Nullable;
 
 class MyDatabaseHelper extends SQLiteOpenHelper {
@@ -27,22 +28,23 @@ class MyDatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String query = "CREATE TABLE " + TABLE_NAME + " "+
+        String query = "CREATE TABLE " + TABLE_NAME + " " +
                 "("
-                +COLUMN_ID+ " INTEGER PRIMARY KEY AUTOINCREMENT, "
-                +COLUMN_PNAME+ " TEXT, "
-                +COLUMN_DATE_TIME+ " TEXT, "
-                +COLUMN_REMARKS+ " TEXT"+
+                + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
+                + COLUMN_PNAME + " TEXT, "
+                + COLUMN_DATE_TIME + " TEXT, "
+                + COLUMN_REMARKS + " TEXT" +
                 ");";
         db.execSQL(query);
     }
+
     @Override
     public void onUpgrade(SQLiteDatabase db, int i, int i1) {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
         onCreate(db);
     }
 
-    public void addAttendence(Attendance attendance){
+    public void addAttendence(Attendance attendance) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
 
@@ -50,25 +52,14 @@ class MyDatabaseHelper extends SQLiteOpenHelper {
         cv.put(COLUMN_DATE_TIME, attendance.getDateTime());
         cv.put(COLUMN_REMARKS, attendance.getRemarks());
 
-        long result = db.insert(TABLE_NAME,null, cv);
-        if(result == -1){
+        long result = db.insert(TABLE_NAME, null, cv);
+        if (result == -1) {
             Toast.makeText(context, "Failed", Toast.LENGTH_SHORT).show();
-        }else {
+        } else {
             Toast.makeText(context, "Added Successfully!", Toast.LENGTH_SHORT).show();
         }
         db.close();
     }
-
-//    Cursor readAllData(){
-//        String query = "SELECT * FROM " + TABLE_NAME;
-//        SQLiteDatabase db = this.getReadableDatabase();
-//
-//        Cursor cursor = null;
-//        if(db != null){
-//            cursor = db.rawQuery(query, null);
-//        }
-//        return cursor;
-//    }
 
 //    void updateAttendance(String row_id, String name, String date, String time, String remarks){
 //
@@ -87,5 +78,17 @@ class MyDatabaseHelper extends SQLiteOpenHelper {
 //        }
 //
 //    }
+
+    Cursor getAllAttendance() { // IT19180526
+
+        String query = "SELECT * FROM " + TABLE_NAME;
+        Cursor cursor = null;
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        if (db != null) {
+            cursor = db.rawQuery(query, null);
+        }
+        return cursor;
+    }
 
 }

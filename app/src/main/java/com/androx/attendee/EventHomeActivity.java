@@ -14,8 +14,7 @@ public class EventHomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_event_home);
 
-        Button btn1 = (Button) findViewById(R.id.btn_homeEvent_add);
-        Button btn2 = (Button) findViewById(R.id.btn_homeEvent_e1);
+        /*Button btn1 = (Button) findViewById(R.id.btn_homeEvent_add);
         Button btn3 = (Button) findViewById(R.id.btn_attendance);
 
         btn1.setOnClickListener(new View.OnClickListener() {
@@ -26,21 +25,13 @@ public class EventHomeActivity extends AppCompatActivity {
             }
         });
 
-        btn2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(EventHomeActivity.this, ViewEventActivity.class);
-                startActivity(intent);
-            }
-        });
-
         btn3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(EventHomeActivity.this, AddAttendeeActivity.class);
+                Intent intent = new Intent(EventHomeActivity.this, AttendanceHomeActivity.class);
                 startActivity(intent);
             }
-        });
+        });*/
 
     }
 }

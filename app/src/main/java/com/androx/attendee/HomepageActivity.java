@@ -17,6 +17,7 @@ public class HomepageActivity extends AppCompatActivity {
 
         Button btn1 = (Button) findViewById(R.id.btn_Event1);
         Button btn2 = (Button) findViewById(R.id.btn_Aboutus1);
+        Button btn3 = (Button) findViewById(R.id.btn_Setting1);
 
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -30,6 +31,13 @@ public class HomepageActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(HomepageActivity.this, AddAttendeeActivity.class));
+            }
+        });
+
+        btn3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(HomepageActivity.this, AttendanceHomeActivity.class));
             }
         });
     }
