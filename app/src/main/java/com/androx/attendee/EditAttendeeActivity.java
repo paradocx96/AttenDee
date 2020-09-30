@@ -10,6 +10,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+
 public class EditAttendeeActivity extends AppCompatActivity {
 
     private Button button1, button2, button3, button4, button5, saveChangeBtn;
@@ -145,7 +149,15 @@ public class EditAttendeeActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                startActivity(new Intent(EditAttendeeActivity.this, ViewAttendeeActivity.class));
+                String personName = name.getText().toString();
+                String personRemarks = remarks.getText().toString();
+                SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd-HH:mm:ss", Locale.getDefault());
+                String dateTime = sdf.format(new Date());
+
+
+                Attendance attendance = new Attendance(Integer.parseInt(id),personName,dateTime,personRemarks);
+                myDatabaseHelper.updateAttendance(attendance);
+                startActivity(new Intent(EditAttendeeActivity.this, AttendanceHomeActivity.class));
 
             }
         });

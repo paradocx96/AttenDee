@@ -13,8 +13,8 @@
     <string name="btn2_main_menu">Attendance</string>
     <string name="btn3_main_menu">About Us</string>
 
-    <string name="btn4_main_menu">- Add -</string>
-    <string name="btn5_main_menu">- View -</string>
+    <string name="btn4_main_menu"> Add </string>
+    <string name="btn5_main_menu"> View </string>
 
     <string name="add_person_name">Person name</string>
     <string name="add_remarks">Remarks</string>
