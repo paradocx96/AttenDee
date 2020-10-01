@@ -2,16 +2,25 @@ package com.androx.attendee;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 
 public class EditAttendeeActivity extends AppCompatActivity {
 
-    Button button1, button2, button3, button4, button5, button6;
-
+    private Button button1, button2, button3, button4, button5, saveChangeBtn;
+    private EditText remarks, name;
+    private Button addAttendBtn;
+    private Context context;
+    private MyDatabaseHelper myDatabaseHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +32,22 @@ public class EditAttendeeActivity extends AppCompatActivity {
         button3 = (Button) findViewById(R.id.btn3_menu);
         button4 = (Button) findViewById(R.id.btn4_menu);
         button5 = (Button) findViewById(R.id.btn5_menu);
-        //button6 = (Button) findViewById(R.id.saveChangesBtn);
+        saveChangeBtn = (Button) findViewById(R.id.saveChangeBtn);
+
+        name = findViewById(R.id.update_editTxt_personName);
+        remarks = findViewById(R.id.update_editTxt_remarks);
+
+        context = this;
+        myDatabaseHelper = new MyDatabaseHelper(context);
+
+        final String id = getIntent().getStringExtra("id1");
+        System.out.println(id);
+
+        Attendance attendance = myDatabaseHelper.getSingleAttendance(Integer.parseInt(id));
+
+        name.setText(attendance.getName());
+        remarks.setText(attendance.getRemarks());
+
 
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -121,15 +145,23 @@ public class EditAttendeeActivity extends AppCompatActivity {
             }
         });
 
-        /* button6.setOnClickListener(new View.OnClickListener() {
-             @Override
-             public void onClick(View view) {
+        saveChangeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
-                 button6.setBackgroundColor(Color.parseColor("#ffffff"));
-                 button6.setTextColor(Color.parseColor("#ffd600"));
+                String personName = name.getText().toString();
+                String personRemarks = remarks.getText().toString();
+                SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd-HH:mm:ss", Locale.getDefault());
+                String dateTime = sdf.format(new Date());
 
-             }
-         }); */
+
+                Attendance attendance = new Attendance(Integer.parseInt(id),personName,dateTime,personRemarks);
+                myDatabaseHelper.updateAttendance(attendance);
+                startActivity(new Intent(EditAttendeeActivity.this, AttendanceHomeActivity.class));
+
+            }
+        });
+
 
 
 

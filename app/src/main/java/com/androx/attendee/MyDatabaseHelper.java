@@ -61,24 +61,6 @@ class MyDatabaseHelper extends SQLiteOpenHelper {
         db.close();
     }
 
-//    void updateAttendance(String row_id, String name, String date, String time, String remarks){
-//
-//        SQLiteDatabase db = this.getWritableDatabase();
-//        ContentValues cv = new ContentValues();
-//        cv.put(COLUMN_PNAME, name);
-//        cv.put(COLUMN_DATE_TIME, date);
-//        cv.put(COLUMN_TIME, time);
-//        cv.put(COLUMN_TIME, remarks);
-//
-//        long result = db.update(TABLE_NAME, cv, "_id=?", new String[]{row_id});
-//        if(result == -1){
-//            Toast.makeText(context, "Failed", Toast.LENGTH_SHORT).show();
-//        }else {
-//            Toast.makeText(context, "Updated Successfully!", Toast.LENGTH_SHORT).show();
-//        }
-//
-//    }
-
     Cursor getAllAttendance() { // IT19180526
 
         String query = "SELECT * FROM " + TABLE_NAME;
@@ -89,6 +71,53 @@ class MyDatabaseHelper extends SQLiteOpenHelper {
             cursor = db.rawQuery(query, null);
         }
         return cursor;
+    }
+
+    public Attendance getSingleAttendance(int id){
+
+        SQLiteDatabase db = getWritableDatabase();
+
+        Cursor cursor = db.query(TABLE_NAME, new String[]{COLUMN_ID,COLUMN_PNAME,COLUMN_DATE_TIME,COLUMN_REMARKS},
+                COLUMN_ID + "= ?",new String[]{String.valueOf(id)},
+                null,null,null);
+
+        Attendance attendance;
+
+        if(cursor != null ){
+            cursor.moveToFirst();
+            attendance = new Attendance(
+                    cursor.getInt(0),
+                    cursor.getString(1),
+                    cursor.getString(2),
+                    cursor.getString(3)
+            );
+            return attendance;
+        }
+
+        return null;
+    }
+
+    public int updateAttendance(Attendance attendance){
+
+        SQLiteDatabase db = getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+
+        contentValues.put(COLUMN_PNAME, attendance.getName());
+        contentValues.put(COLUMN_DATE_TIME, attendance.getDateTime());
+        contentValues.put(COLUMN_REMARKS, attendance.getRemarks());
+
+        int result = db.update(TABLE_NAME, contentValues,COLUMN_ID+"=?",
+                new String[]{String.valueOf(attendance.getId())});
+
+        if(result == -1){
+            Toast.makeText(context, "Failed", Toast.LENGTH_SHORT).show();
+        }else {
+            Toast.makeText(context, "Updated Successfully!", Toast.LENGTH_SHORT).show();
+        }
+
+        db.close();
+        return result;
+
     }
 
 }
