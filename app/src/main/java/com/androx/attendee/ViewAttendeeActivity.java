@@ -13,7 +13,8 @@ public class ViewAttendeeActivity extends AppCompatActivity {
 
     TextView att_name, att_datetime, att_remark;
     String id, name, datetime, remark;
-    Button btn1;
+    Button btn_option;
+    String pass_id, pass_name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,18 +24,20 @@ public class ViewAttendeeActivity extends AppCompatActivity {
         att_name = findViewById(R.id.attendeeName_Example1);
         att_datetime = findViewById(R.id.attendeeDate_Example);
         att_remark = findViewById(R.id.attendeeRemark_Example4);
+        btn_option = (Button) findViewById(R.id.btn_option);
 
-        btn1 = (Button) findViewById(R.id.btn_option);
-        btn1.setOnClickListener(new View.OnClickListener() {
+        btn_option.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ViewAttendeeActivity.this, OptionAttendeeActivity.class);
 
-                Intent intent1 = new Intent(ViewAttendeeActivity.this, EditAttendeeActivity.class);
-                String id1 = getIntent().getStringExtra("id");
-                intent1.putExtra("id1", id1);
+                pass_id = id;
+                pass_name = name;
+                Intent intent = new Intent(ViewAttendeeActivity.this, OptionAttendeeActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putString("id", pass_id);
+                bundle.putString("name", pass_name);
+                intent.putExtras(bundle);
                 startActivity(intent);
-                startActivity(intent1);
             }
         });
 
