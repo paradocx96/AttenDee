@@ -12,9 +12,8 @@
         <activity android:name=".OptionEventActivity" />
         <activity android:name=".DeleteEventActivity" />
         <activity android:name=".ViewEventActivity" />
-        <activity android:name=".DeleteAttendeeActivity" />
-        <activity android:name=".OptionAttendeeActivity" />
-        <activity android:name=".ViewAttendeeActivity" />
+        <activity android:name=".OptionAttendeeActivity"/>
+        <activity android:name=".ViewAttendeeActivity"/>
         <activity android:name=".AttendanceHomeActivity" />
         <activity android:name=".EventHomeActivity" />
         <activity android:name=".EditAttendeeActivity" />
