@@ -44,16 +44,17 @@ public class AddAttendeeActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                button1.setBackgroundColor(Color.parseColor("#ffffff"));
-                button1.setTextColor(Color.parseColor("#9c27b0"));
-
-
-                button2.setBackgroundColor(Color.parseColor("#9c27b0"));
-                button2.setTextColor(Color.parseColor("#ffffff"));
-
-
-                button3.setBackgroundColor(Color.parseColor("#9c27b0"));
-                button3.setTextColor(Color.parseColor("#ffffff"));
+                startActivity(new Intent(AddAttendeeActivity.this,AddEventActivity.class));
+//                button1.setBackgroundColor(Color.parseColor("#ffffff"));
+//                button1.setTextColor(Color.parseColor("#9c27b0"));
+//
+//
+//                button2.setBackgroundColor(Color.parseColor("#9c27b0"));
+//                button2.setTextColor(Color.parseColor("#ffffff"));
+//
+//
+//                button3.setBackgroundColor(Color.parseColor("#9c27b0"));
+//                button3.setTextColor(Color.parseColor("#ffffff"));
 
 
             }
@@ -63,17 +64,17 @@ public class AddAttendeeActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-
-                button2.setBackgroundColor(Color.parseColor("#ffffff"));
-                button2.setTextColor(Color.parseColor("#9c27b0"));
-
-
-                button1.setBackgroundColor(Color.parseColor("#9c27b0"));
-                button1.setTextColor(Color.parseColor("#ffffff"));
-
-
-                button3.setBackgroundColor(Color.parseColor("#9c27b0"));
-                button3.setTextColor(Color.parseColor("#ffffff"));
+                startActivity(new Intent(AddAttendeeActivity.this,AttendanceHomeActivity.class));
+//                button2.setBackgroundColor(Color.parseColor("#ffffff"));
+//                button2.setTextColor(Color.parseColor("#9c27b0"));
+//
+//
+//                button1.setBackgroundColor(Color.parseColor("#9c27b0"));
+//                button1.setTextColor(Color.parseColor("#ffffff"));
+//
+//
+//                button3.setBackgroundColor(Color.parseColor("#9c27b0"));
+//                button3.setTextColor(Color.parseColor("#ffffff"));
 
 
 
@@ -84,14 +85,15 @@ public class AddAttendeeActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                button3.setBackgroundColor(Color.parseColor("#ffffff"));
-                button3.setTextColor(Color.parseColor("#9c27b0"));
 
-                button1.setBackgroundColor(Color.parseColor("#9c27b0"));
-                button1.setTextColor(Color.parseColor("#ffffff"));
-
-                button2.setBackgroundColor(Color.parseColor("#9c27b0"));
-                button2.setTextColor(Color.parseColor("#ffffff"));
+//                button3.setBackgroundColor(Color.parseColor("#ffffff"));
+//                button3.setTextColor(Color.parseColor("#9c27b0"));
+//
+//                button1.setBackgroundColor(Color.parseColor("#9c27b0"));
+//                button1.setTextColor(Color.parseColor("#ffffff"));
+//
+//                button2.setBackgroundColor(Color.parseColor("#9c27b0"));
+//                button2.setTextColor(Color.parseColor("#ffffff"));
 
 
             }
@@ -106,11 +108,11 @@ public class AddAttendeeActivity extends AppCompatActivity {
                 startActivity(intent);
 
 
-                button4.setBackgroundColor(Color.parseColor("#ff9100"));
-                button4.setTextColor(Color.parseColor("#ffffff"));
-
-                button5.setBackgroundColor(Color.parseColor("#ffffff"));
-                button5.setTextColor(Color.parseColor("#ff9100"));
+//                button4.setBackgroundColor(Color.parseColor("#ff9100"));
+//                button4.setTextColor(Color.parseColor("#ffffff"));
+//
+//                button5.setBackgroundColor(Color.parseColor("#ffffff"));
+//                button5.setTextColor(Color.parseColor("#ff9100"));
 
             }
         });
@@ -120,14 +122,14 @@ public class AddAttendeeActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(AddAttendeeActivity.this, EditAttendeeActivity.class);
+                Intent intent = new Intent(AddAttendeeActivity.this, AttendanceHomeActivity.class);
                 startActivity(intent);
 
-                button5.setBackgroundColor(Color.parseColor("#ff9100"));
-                button5.setTextColor(Color.parseColor("#ffffff"));
-
-                button4.setBackgroundColor(Color.parseColor("#ffffff"));
-                button4.setTextColor(Color.parseColor("#ff9100"));
+//                button5.setBackgroundColor(Color.parseColor("#ff9100"));
+//                button5.setTextColor(Color.parseColor("#ffffff"));
+//
+//                button4.setBackgroundColor(Color.parseColor("#ffffff"));
+//                button4.setTextColor(Color.parseColor("#ff9100"));
 
 
             }
@@ -139,16 +141,31 @@ public class AddAttendeeActivity extends AppCompatActivity {
 
                 String personName = name.getText().toString();
                 String personRemarks = remarks.getText().toString();
-//                Date currentTime = Calendar.getInstance().getTime();
-//                String dateTime = currentTime.toString();
                 SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd-HH:mm:ss", Locale.getDefault());
                 String dateTime = sdf.format(new Date());
 
+                if(personName.length()==0)
+                {
+                    name.requestFocus();
+                    name.setError("FIELD CANNOT BE EMPTY");
+                }
+                else if(!personName.matches("[a-zA-Z ]+"))
+                {
+                    name.requestFocus();
+                    name.setError("ENTER ONLY ALPHABETICAL CHARACTER");
+                }
+                else if(remarks.length()==0)
+                {
+                    remarks.requestFocus();
+                    remarks.setError("FIELD CANNOT BE EMPTY");
+                }
+                else {
 
-                Attendance attendance = new Attendance(personName,dateTime,personRemarks);
-                myDatabaseHelper.addAttendence(attendance);
+                    Attendance attendance = new Attendance(personName, dateTime, personRemarks);
+                    myDatabaseHelper.addAttendence(attendance);
 
-                startActivity(new Intent(AddAttendeeActivity.this,AttendanceHomeActivity.class));
+                    startActivity(new Intent(AddAttendeeActivity.this, AttendanceHomeActivity.class));
+                }
             }
         });
 
