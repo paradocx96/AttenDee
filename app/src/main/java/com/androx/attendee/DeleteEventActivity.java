@@ -7,20 +7,20 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class EventHomeActivity extends AppCompatActivity {
+public class DeleteEventActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_event_home);
+        setContentView(R.layout.activity_delete_event);
 
-        Button btn1 = (Button) findViewById(R.id.btn_homeEvent_add);
-        Button btn2 = (Button) findViewById(R.id.btn_homeEvent_e1);
+        Button btn1 = (Button) findViewById(R.id.btn_delete_yes3);
+        Button btn2 = (Button) findViewById(R.id.btn_delete_no3);
 
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(EventHomeActivity.this, AddEventActivity.class);
+                Intent intent = new Intent(DeleteEventActivity.this, EventHomeActivity.class);
                 startActivity(intent);
             }
         });
@@ -28,10 +28,9 @@ public class EventHomeActivity extends AppCompatActivity {
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(EventHomeActivity.this, ViewEventActivity.class);
+                Intent intent = new Intent(DeleteEventActivity.this, OptionEventActivity.class);
                 startActivity(intent);
             }
         });
-
     }
 }
