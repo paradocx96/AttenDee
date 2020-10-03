@@ -19,28 +19,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
-    <TableRow
-        android:id="@+id/table_event_view2"
-        android:layout_width="363dp"
-        android:layout_height="367dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="20dp"
-        android:background="@drawable/custom_button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.823">
-
-        <Button
-            android:id="@+id/btn_homeEvent_e1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/custom_button"
-            android:text="@string/event_name_example" />
-    </TableRow>
-
     <Button
         android:id="@+id/btn_homeEvent_add"
         android:layout_width="124dp"
@@ -62,24 +40,6 @@
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/btn_homeEvent_abus"
-        android:layout_width="80dp"
-        android:layout_height="40dp"
-        android:background="@drawable/button_curve"
-        android:text="@string/aboutus_name"
-        android:textColor="#FFFFFF"
-        android:textColorLink="@color/colorPrimaryDark"
-        android:textSize="12sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.976"
-        tools:ignore="MissingConstraints" />
-
-    <Button
         android:id="@+id/btn_homeEvent_event"
         android:layout_width="124dp"
         android:layout_height="43dp"
@@ -98,5 +58,44 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.254"
         tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btn_homeEvent_abus"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:background="@drawable/button_curve"
+        android:text="@string/aboutus_name"
+        android:textColor="#FFFFFF"
+        android:textColorLink="@color/colorPrimaryDark"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="341dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/btn_homeEvent_abus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_homeEvent_add"
+        android:background="@color/colorWhite">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/eventList"
+            android:layout_width="350dp"
+            android:layout_height="341dp"
+            android:paddingTop="?attr/actionBarSize" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

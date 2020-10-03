@@ -34,13 +34,6 @@ public class AddEventActivity extends AppCompatActivity {
             }
         });
 
-        editEventButton =(Button) findViewById(R.id.EditEvent);
-        editEventButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openActivityEditEvent();
-            }
-        });
     }
 
     public void openActivityEvents(){
@@ -53,8 +46,4 @@ public class AddEventActivity extends AppCompatActivity {
         startActivity(intent2);
     }
 
-    public void openActivityEditEvent(){
-        Intent intent3 = new Intent(this, EditEventActivity.class);
-        startActivity(intent3);
-    }
 }

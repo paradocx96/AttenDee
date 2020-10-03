@@ -4,76 +4,121 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/abstract_02_white"
+    android:background="@drawable/common_background"
     tools:context=".EditEventActivity">
 
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="124dp"
-        android:layout_height="43dp"
-        android:background="@drawable/custom_button"
-        android:text="ABOUT US"
-        android:textColor="@android:color/holo_purple"
-        android:textColorLink="@color/colorPrimaryDark"
-        android:textSize="10sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/button5"
+    <TextView
+        android:id="@+id/logo_view11"
+        android:layout_width="389dp"
+        android:layout_height="233dp"
+        android:background="@drawable/common_logo"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.523"
-        app:layout_constraintStart_toEndOf="@+id/button5"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/button5"
         android:layout_width="124dp"
         android:layout_height="43dp"
-        android:background="@drawable/custom_button"
+        android:background="@drawable/button_curve"
         android:text="ATTENDANCE"
-        android:textColor="@android:color/holo_purple"
+        android:textColor="#FFFFFF"
         android:textColorLink="@color/colorPrimaryDark"
-        android:textSize="10sp"
+        android:textSize="14sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.734" />
+        app:layout_constraintVertical_bias="0.30" />
 
     <Button
-        android:id="@+id/events"
+        android:id="@+id/btn_view6"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:background="@drawable/button_curve_2nd_navi"
+        android:text="View"
+        android:textColor="#FAFAFA"
+        android:textColorLink="@color/colorPrimaryDark"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.691"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4" />
+
+    <Button
+        android:id="@+id/btn_Aboutus1"
         android:layout_width="124dp"
         android:layout_height="43dp"
-        android:background="@drawable/custom_button"
+        android:background="@drawable/button_curve"
+        android:text="ABOUT US"
+        android:textColor="#FFFFFF"
+        android:textColorLink="@color/colorPrimaryDark"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.944"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.299" />
+
+    <Button
+        android:id="@+id/event"
+        android:layout_width="124dp"
+        android:layout_height="43dp"
+        android:background="@drawable/button_curve"
         android:shadowColor="#00BCD4"
         android:text="EVENT"
-        android:textColor="@android:color/holo_purple"
+        android:textColor="#FFFFFF"
         android:textColorLink="@color/colorPrimaryDark"
-        android:textSize="10sp"
+        android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/button5"
         app:layout_constraintEnd_toStartOf="@+id/button5"
+        app:layout_constraintHorizontal_bias="0.842"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/button5" />
+        app:layout_constraintTop_toTopOf="@+id/button5"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/ADD"
-        android:layout_width="124dp"
-        android:layout_height="43dp"
-        android:background="@drawable/custom_button_2"
+        android:id="@+id/button8"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:background="@drawable/button_curve_2nd_navi"
         android:shadowColor="#00BCD4"
         android:text="UPDATE"
-        android:textColor="@color/cardview_light_background"
+        android:textColor="#FAFAFA"
         android:textColorLink="@color/colorPrimaryDark"
-        android:textSize="10sp"
+        android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/button6"
-        app:layout_constraintHorizontal_bias="0.85"
-        app:layout_constraintStart_toStartOf="@+id/button6"
-        app:layout_constraintTop_toBottomOf="@+id/editTextDate"
-        app:layout_constraintVertical_bias="0.538" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.829"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.85" />
+
+    <Button
+        android:id="@+id/add"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:background="@drawable/button_curve_2nd_navi"
+        android:text="Add"
+        android:textColor="#FAFAFA"
+        android:textColorLink="@color/colorPrimaryDark"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.315"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4" />
 
     <EditText
         android:id="@+id/editTextTextMultiLine"
@@ -81,101 +126,46 @@
         android:layout_height="44dp"
         android:ems="10"
         android:gravity="start|top"
-        android:hint="@string/event_remark"
+        android:hint="Remark"
         android:inputType="textMultiLine"
+        android:textColor="#000000"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/button8"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.485"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextDate"
-        app:layout_constraintVertical_bias="0.145" />
+        app:layout_constraintVertical_bias="0.525" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/textInputEditText2"
         android:layout_width="309dp"
         android:layout_height="40dp"
-        android:hint="@string/new_event_name"
+        android:hint="Event Name"
         android:scrollbarThumbHorizontal="@drawable/custom_button"
-        android:textColor="@color/colorAccent"
+        android:textColor="#000000"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button5"
-        app:layout_constraintVertical_bias="0.325" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.535" />
 
     <EditText
         android:id="@+id/editTextDate"
         android:layout_width="307dp"
         android:layout_height="45dp"
+        android:layout_marginTop="32dp"
         android:ems="10"
-        android:hint="@string/event_date"
+        android:hint="Date"
         android:inputType="date"
+        android:textColor="#000000"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputEditText2"
-        app:layout_constraintVertical_bias="0.119" />
-
-    <Button
-        android:id="@+id/ViewEvents"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="394dp"
-        android:background="@drawable/custom_button_2"
-        android:text="View"
-        android:textColor="@color/cardview_light_background"
-        android:textColorLink="@color/colorPrimaryDark"
-        android:textSize="10sp"
-        app:layout_constraintBottom_toBottomOf="@+id/EditEvent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.369"
-        app:layout_constraintStart_toEndOf="@+id/EditEvent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="120dp"
-        android:layout_height="424dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/profile_new"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="-114dp" />
-
-    <Button
-        android:id="@+id/AddNewEvent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/custom_button_2"
-        android:text="Add"
-        android:textColor="@color/cardview_light_background"
-        android:textColorLink="@color/colorPrimaryDark"
-        android:textSize="10sp"
-        app:layout_constraintBottom_toBottomOf="@+id/EditEvent"
-        app:layout_constraintEnd_toStartOf="@+id/EditEvent"
-        app:layout_constraintHorizontal_bias="0.698"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/EditEvent" />
-
-    <Button
-        android:id="@+id/EditEvent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/custom_button_2"
-        android:text="Edit"
-        android:textColor="@color/cardview_light_background"
-        android:textColorLink="@color/colorPrimaryDark"
-        android:textSize="10sp"
-        app:layout_constraintBottom_toTopOf="@+id/textInputEditText2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button5" />
+        app:layout_constraintVertical_bias="0.004" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

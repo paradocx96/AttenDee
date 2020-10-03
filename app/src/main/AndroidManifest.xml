@@ -9,12 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".OptionEventActivity"></activity>
+        <activity android:name=".OptionEventActivity" />
         <activity android:name=".DeleteEventActivity" />
         <activity android:name=".ViewEventActivity" />
-        <activity android:name=".DeleteAttendeeActivity" />
-        <activity android:name=".OptionAttendeeActivity" />
-        <activity android:name=".ViewAttendeeActivity" />
+        <activity android:name=".OptionAttendeeActivity"/>
+        <activity android:name=".ViewAttendeeActivity"/>
         <activity android:name=".AttendanceHomeActivity" />
         <activity android:name=".EventHomeActivity" />
         <activity android:name=".EditAttendeeActivity" />
