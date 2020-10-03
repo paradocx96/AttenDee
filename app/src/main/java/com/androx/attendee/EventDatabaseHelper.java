@@ -53,10 +53,61 @@ public class EventDatabaseHelper extends SQLiteOpenHelper {
 
         long result = sqLiteDatabase.insert(TABLE_NAME, null, contentValues);
         if (result == -1) {
-            Toast.makeText(context, "Failed", Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, "Failed!", Toast.LENGTH_SHORT).show();
         } else {
-            Toast.makeText(context, "Added Successfully!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, "Added!", Toast.LENGTH_SHORT).show();
         }
         sqLiteDatabase.close();
+    }
+
+    Cursor getAllEvents() {
+
+        String query = "SELECT * FROM " + TABLE_NAME;
+        Cursor cursor = null;
+        SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
+
+        if (sqLiteDatabase != null) {
+            cursor = sqLiteDatabase.rawQuery(query, null);
+        }
+        return cursor;
+    }
+
+    public int updateEvent(Event event){
+
+        SQLiteDatabase sqLiteDatabase = getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+
+        contentValues.put(COLUMN_EVNT_NAME, event.getName());
+        contentValues.put(COLUMN_DATE, event.getDate());
+        contentValues.put(COLUMN_REMARKS, event.getRemarks());
+
+        int result = sqLiteDatabase.update(TABLE_NAME, contentValues,COLUMN_ID+"=?",
+                new String[]{String.valueOf(event.getId())});
+
+        if(result == -1){
+            Toast.makeText(context, "Failed!", Toast.LENGTH_SHORT).show();
+        }else {
+            Toast.makeText(context, "Updated!", Toast.LENGTH_SHORT).show();
+        }
+
+        sqLiteDatabase.close();
+        return result;
+
+    }
+
+    void deleteSingleEvent(String row_id) {
+        SQLiteDatabase sqLiteDatabase =  this.getWritableDatabase();
+        long result = sqLiteDatabase.delete(TABLE_NAME," id=?", new String[]{String.valueOf(row_id)});
+
+        if (result == -1) {
+            Toast.makeText(context,"Failed!", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(context,"Deleted!", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    void deleteAllEvents() {
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        sqLiteDatabase.execSQL("DELETE FROM " + TABLE_NAME);
     }
 }
