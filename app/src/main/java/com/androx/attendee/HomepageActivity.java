@@ -30,7 +30,7 @@ public class HomepageActivity extends AppCompatActivity {
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(HomepageActivity.this, AddAttendeeActivity.class));
+                startActivity(new Intent(HomepageActivity.this, AboutUs.class));
             }
         });
 
