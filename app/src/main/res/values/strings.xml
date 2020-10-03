@@ -54,5 +54,6 @@
     <string name="event_view_date_example">2020 Agu 30</string>
     <string name="event_view_description">Description</string>
     <string name="event_view_description_Example">Xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx.</string>
+    <string name="Cancel">Cancel</string>
 
 </resources>
