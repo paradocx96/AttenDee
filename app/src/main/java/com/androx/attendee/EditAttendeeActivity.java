@@ -42,91 +42,14 @@ public class EditAttendeeActivity extends AppCompatActivity {
         name.setText(attendance.getName());
         remarks.setText(attendance.getRemarks());
 
-
-//        button1.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//
-//                startActivity(new Intent(EditAttendeeActivity.this,AddEventActivity.class));
-////                button1.setBackgroundColor(Color.parseColor("#ffffff"));
-////                button1.setTextColor(Color.parseColor("#9c27b0"));
-////
-////
-////                button2.setBackgroundColor(Color.parseColor("#9c27b0"));
-////                button2.setTextColor(Color.parseColor("#ffffff"));
-////
-////
-////                button3.setBackgroundColor(Color.parseColor("#9c27b0"));
-////                button3.setTextColor(Color.parseColor("#ffffff"));
-//
-//
-//            }
-//        });
-
-//        button2.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//
-//                startActivity(new Intent(EditAttendeeActivity.this,AttendanceHomeActivity.class));
-////                button2.setBackgroundColor(Color.parseColor("#ffffff"));
-////                button2.setTextColor(Color.parseColor("#9c27b0"));
-////
-////
-////                button1.setBackgroundColor(Color.parseColor("#9c27b0"));
-////                button1.setTextColor(Color.parseColor("#ffffff"));
-////
-////
-////                button3.setBackgroundColor(Color.parseColor("#9c27b0"));
-////                button3.setTextColor(Color.parseColor("#ffffff"));
-//
-//
-//
-//            }
-//        });
-
-//        button3.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//
-////                button3.setBackgroundColor(Color.parseColor("#ffffff"));
-////                button3.setTextColor(Color.parseColor("#9c27b0"));
-////
-////
-////                button1.setBackgroundColor(Color.parseColor("#9c27b0"));
-////                button1.setTextColor(Color.parseColor("#ffffff"));
-////
-////
-////                button2.setBackgroundColor(Color.parseColor("#9c27b0"));
-////                button2.setTextColor(Color.parseColor("#ffffff"));
-//
-//
-//            }
-//        });
-
-//        button4.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//
-//                Intent intent = new Intent(EditAttendeeActivity.this, AddAttendeeActivity.class);
-//                startActivity(intent);
-//
-//
-////                button4.setBackgroundColor(Color.parseColor("#ff9100"));
-////                button4.setTextColor(Color.parseColor("#ffffff"));
-////
-////                button5.setBackgroundColor(Color.parseColor("#ffffff"));
-////                button5.setTextColor(Color.parseColor("#ff9100"));
-//
-//            }
-//        });
-
-
         chancelBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(EditAttendeeActivity.this, OptionAttendeeActivity.class);
+                Intent intent = new Intent(EditAttendeeActivity.this, AttendanceHomeActivity.class);
                 startActivity(intent);
+
+
 
             }
         });
@@ -159,7 +82,8 @@ public class EditAttendeeActivity extends AppCompatActivity {
 
                     Attendance attendance = new Attendance(Integer.parseInt(id), personName, dateTime, personRemarks);
                     myDatabaseHelper.updateAttendance(attendance);
-                    startActivity(new Intent(EditAttendeeActivity.this, AttendanceHomeActivity.class));
+
+                    startActivity( new Intent(EditAttendeeActivity.this, AttendanceHomeActivity.class));
 
                 }
             }
