@@ -55,4 +55,19 @@
     <string name="event_view_description">Description</string>
     <string name="event_view_description_Example">Xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx.</string>
 
+
+    <!--About Us-->
+    <string name="aboutUs">Who are we?</string>
+    <string name="AndroXr">AndroX®</string>
+    <string name="dteame">Developer Team</string>
+    <string name="NameVinuri">Galagoda R R P W M R V N</string>
+    <string name="NameNavinda">Chandrasiri S A N L D</string>
+    <string name="NameHirush">Malwatta H G</string>
+    <string name="NameEranga">Senevirathne D R E S</string>
+    <string name="IDvinuri">IT19165394</string>
+    <string name="IDnavinda">IT19180526</string>
+    <string name="IDhirush">IT19240848</string>
+    <string name="IDeranga">IT19136820</string>
+    <string name="Back">Back</string>
+
 </resources>
