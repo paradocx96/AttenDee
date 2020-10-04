@@ -2,6 +2,7 @@ package com.androx.attendee;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -12,6 +13,8 @@ public class AddEventActivity extends AppCompatActivity {
     private Button eventsButton;
     private Button addEventButton;
     private Button editEventButton;
+    private Context context;
+    private MyDatabaseHelper myDatabaseHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
