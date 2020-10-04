@@ -1,5 +1,7 @@
 package com.androx.attendee;
 
+import android.widget.EditText;
+
 public class Event {
 
     private int id;
@@ -16,6 +18,10 @@ public class Event {
         this.date = date;
         this.remarks = remarks;
     }
+
+    public Event(String name, String date, String remarks) {
+    }
+
 
     public int getId() {
         return id;

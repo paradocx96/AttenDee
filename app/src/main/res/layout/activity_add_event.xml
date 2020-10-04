@@ -18,6 +18,17 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
+    <TextView
+        android:id="@+id/recBox4"
+        android:layout_width="361dp"
+        android:layout_height="280dp"
+        android:background="@drawable/box"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.771" />
+
     <Button
         android:id="@+id/button6"
         android:layout_width="124dp"
@@ -86,7 +97,7 @@
         app:layout_constraintHorizontal_bias="0.829"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/logo_view12"
-        app:layout_constraintVertical_bias="0.853" />
+        app:layout_constraintVertical_bias="0.93" />
 
     <EditText
         android:id="@+id/editTextTextMultiLine"
