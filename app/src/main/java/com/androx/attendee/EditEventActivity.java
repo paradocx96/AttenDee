@@ -2,47 +2,104 @@ package com.androx.attendee;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 
 public class EditEventActivity extends AppCompatActivity {
 
     private Button eventsButton;
+    private Button attendance;
+    private Button aboutUs;
     private Button addEventButton;
+    private Button viewEventButton;
+    private Button update;
+    private EditText name, date, remarks;
+    private Context context;
+    private MyDatabaseHelper myDatabaseHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_event);
 
-       /* eventsButton =(Button) findViewById(R.id.events);
+        eventsButton = (Button) findViewById(R.id.events);
+        attendance = (Button) findViewById(R.id.button5);
+        aboutUs = (Button) findViewById(R.id.button6);
+        addEventButton = (Button) findViewById(R.id.AddNewEvent);
+        viewEventButton = (Button) findViewById(R.id.ViewEvents);
+        update = (Button) findViewById(R.id.updateEvent);
+        name = findViewById(R.id.textInputEditText2);
+        date = findViewById(R.id.editTextDate);
+        remarks = findViewById(R.id.editTextTextMultiLine);
+
+        context = this;
+        myDatabaseHelper = new MyDatabaseHelper(context);
+
+        final String id = getIntent().getStringExtra("id1");
+        System.out.println(id);
+
+        Event event = myDatabaseHelper.getSingleEvent(Integer.parseInt(id));
+
+        name.setText(event.getName());
+        remarks.setText(event.getRemarks());
+
         eventsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openActivityEvents();
+                startActivity(new Intent(EditEventActivity.this, AddEventActivity.class));
             }
         });
 
-        addEventButton =(Button) findViewById(R.id.btn_add_editEvent);
+        attendance.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(EditEventActivity.this, AttendanceHomeActivity.class));
+            }
+        });
+
+        aboutUs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(EditEventActivity.this, HomepageActivity.class));
+            }
+        });
+
         addEventButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openActivityAddEvents();
+                startActivity(new Intent(EditEventActivity.this, AddEventActivity.class));
             }
-        });*/
+        });
 
+        viewEventButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(EditEventActivity.this, ViewEventActivity.class));
+            }
+        });
+
+        update.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                String eventName = name.getText().toString();
+                SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy/MM/dd", Locale.getDefault());
+                String eventDate = simpleDateFormat.format(new Date());
+                String eventRemarks = remarks.getText().toString();
+
+                    Event event = new Event(Integer.parseInt(id),eventName, eventDate, eventRemarks);
+                    myDatabaseHelper.updateEvent(event);
+
+                    startActivity(new Intent(EditEventActivity.this, AddEventActivity.class));
+            }
+        });
     }
-
-//    public void openActivityEvents(){
-//        Intent intent4 = new Intent(this, AddEventActivity.class);
-//        startActivity(intent4);
-//    }
-//
-//    public void openActivityAddEvents(){
-//        Intent intent5 = new Intent(this, AddEventActivity.class);
-//        startActivity(intent5);
-//    }
-
 }

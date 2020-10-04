@@ -153,7 +153,7 @@ class MyDatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("DELETE FROM " + TABLE_NAME);
     }
 
-    //IT19136820
+    //IT19136820-----------------------------------------------------------------
     public void addEvent(Event event) {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
@@ -169,6 +169,30 @@ class MyDatabaseHelper extends SQLiteOpenHelper {
             Toast.makeText(context, "Added!", Toast.LENGTH_SHORT).show();
         }
         sqLiteDatabase.close();
+    }
+
+    public Event getSingleEvent(int id){
+
+        SQLiteDatabase sQLiteDatabase = getWritableDatabase();
+
+        Cursor cursor = sQLiteDatabase.query(EVENT_TABLE_NAME, new String[]{COLUMN_EVNT_ID,COLUMN_EVNT_NAME,COLUMN_DATE,COLUMN_EVENT_REMARKS},
+                COLUMN_EVNT_ID + "= ?",new String[]{String.valueOf(id)},
+                null,null,null);
+
+        Event event;
+
+        if(cursor != null ){
+            cursor.moveToFirst();
+            event = new Event(
+                    cursor.getInt(0),
+                    cursor.getString(1),
+                    cursor.getString(2),
+                    cursor.getString(3)
+            );
+            return event;
+        }
+
+        return null;
     }
 
     public int updateEvent(Event event){
@@ -215,5 +239,5 @@ class MyDatabaseHelper extends SQLiteOpenHelper {
         } else {
             Toast.makeText(context,"Deleted!", Toast.LENGTH_SHORT).show();
         }
-    }
+    } 
 }
