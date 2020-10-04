@@ -105,7 +105,7 @@
         app:layout_constraintVertical_bias="0.85" />
 
     <Button
-        android:id="@+id/add"
+        android:id="@+id/btn_add_editEvent"
         android:layout_width="100dp"
         android:layout_height="40dp"
         android:background="@drawable/button_curve_2nd_navi"

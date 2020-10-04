@@ -25,7 +25,7 @@ public class OptionAttendeeActivity extends AppCompatActivity {
 
         btn_Option_Edit = (Button) findViewById(R.id.btn_edit_opt);
         btn_Option_Delete = (Button) findViewById(R.id.btn_delete_opt);
-        btn_Option_Close = (Button) findViewById(R.id.btn_opt_close);
+
 
         att_name = (TextView)findViewById(R.id.attendeeName3);
 
@@ -47,6 +47,33 @@ public class OptionAttendeeActivity extends AppCompatActivity {
             }
         });
 
+        Button btn_event_home = (Button) findViewById(R.id.btn_event3);
+        btn_event_home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(OptionAttendeeActivity.this, EventHomeActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button btn_aboutus = (Button) findViewById(R.id.btn_aboutus3);
+        btn_aboutus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(OptionAttendeeActivity.this, AboutUs.class);
+                startActivity(intent);
+            }
+        });
+
+        Button btn_attendance = (Button) findViewById(R.id.btn_attendance3);
+        btn_attendance.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(OptionAttendeeActivity.this, AttendanceHomeActivity.class);
+                startActivity(intent);
+            }
+        });
+
         btn_Option_Delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -54,13 +81,14 @@ public class OptionAttendeeActivity extends AppCompatActivity {
             }
         });
 
-        /*btn_Option_Close.setOnClickListener(new View.OnClickListener() {
+        btn_Option_Close = (Button) findViewById(R.id.btn_opt_close);
+        btn_Option_Close.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(OptionAttendeeActivity.this, ViewAttendeeActivity.class);
+                Intent intent = new Intent(OptionAttendeeActivity.this, AttendanceHomeActivity.class);
                 startActivity(intent);
             }
-        });*/
+        });
     }
 
     void confirmDelete(final String del_id) { // IT19180526

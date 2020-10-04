@@ -15,12 +15,7 @@ import java.util.Locale;
 
 public class AddEventActivity extends AppCompatActivity {
 
-    private Button eventsButton;
-    private Button attendance;
-    private Button aboutUs;
-    private Button addEventButton;
-    private Button viewEventButton;
-    private Button add;
+    private Button eventsButton, add;
     private EditText name, date, remarks;
     private Context context;
     private MyDatabaseHelper myDatabaseHelper;
@@ -31,11 +26,8 @@ public class AddEventActivity extends AppCompatActivity {
         setContentView(R.layout.activity_add_event);
 
         eventsButton = (Button) findViewById(R.id.events);
-        attendance = (Button) findViewById(R.id.button5);
-        aboutUs = (Button) findViewById(R.id.button6);
-        addEventButton = (Button) findViewById(R.id.AddNewEvent);
-        viewEventButton = (Button) findViewById(R.id.ViewEvents);
         add = (Button) findViewById(R.id.ADD);
+
         name = findViewById(R.id.textInputEditText2);
         date = findViewById(R.id.editTextDate);
         remarks = findViewById(R.id.editTextTextMultiLine);
@@ -46,35 +38,7 @@ public class AddEventActivity extends AppCompatActivity {
         eventsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(AddEventActivity.this,AddEventActivity.class));
-            }
-        });
-
-        attendance.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(AddEventActivity.this,AttendanceHomeActivity.class));
-            }
-        });
-
-        aboutUs.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(AddEventActivity.this,HomepageActivity.class));
-            }
-        });
-
-        addEventButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(AddEventActivity.this,AddEventActivity.class));
-            }
-        });
-
-        viewEventButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(AddEventActivity.this,ViewEventActivity.class));
+                startActivity(new Intent(AddEventActivity.this,EventHomeActivity.class));
             }
         });
 
