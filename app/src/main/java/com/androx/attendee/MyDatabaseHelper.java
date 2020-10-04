@@ -193,4 +193,27 @@ class MyDatabaseHelper extends SQLiteOpenHelper {
         return result;
 
     }
+
+    Cursor getAllEvents() {
+
+        String query = "SELECT * FROM " + EVENT_TABLE_NAME;
+        Cursor cursor = null;
+        SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
+
+        if (sqLiteDatabase != null) {
+            cursor = sqLiteDatabase.rawQuery(query, null);
+        }
+        return cursor;
+    }
+
+    void deleteSingleEvent(String row_id) {
+        SQLiteDatabase sqLiteDatabase =  this.getWritableDatabase();
+        long result = sqLiteDatabase.delete(EVENT_TABLE_NAME," id=?", new String[]{String.valueOf(row_id)});
+
+        if (result == -1) {
+            Toast.makeText(context,"Failed!", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(context,"Deleted!", Toast.LENGTH_SHORT).show();
+        }
+    }
 }

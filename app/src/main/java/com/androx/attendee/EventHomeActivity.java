@@ -61,5 +61,33 @@ public class EventHomeActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        recyclerView = findViewById(R.id.eventList);
+        mydb = new MyDatabaseHelper(EventHomeActivity.this);
+        eve_id = new ArrayList<>();
+        eve_name = new ArrayList<>();
+        eve_dateTime = new ArrayList<>();
+        eve_remark = new ArrayList<>();
+
+        saveAllAttendanceInArray();
+
+        eventAdapter = new EventAdapter(EventHomeActivity.this,eve_id,eve_name,eve_dateTime,eve_remark);
+        recyclerView.setAdapter(eventAdapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(EventHomeActivity.this));
+    }
+
+    void saveAllAttendanceInArray() {
+        Cursor cursor = mydb.getAllEvents();
+
+        if (cursor.getCount() == 0) {
+            Toast.makeText(this,"No Data!", Toast.LENGTH_SHORT).show();
+        } else {
+            while (cursor.moveToNext()) {
+                eve_id.add(cursor.getString(0));
+                eve_name.add(cursor.getString(1));
+                eve_dateTime.add(cursor.getString(2));
+                eve_remark.add(cursor.getString(3));
+            }
+        }
     }
 }
