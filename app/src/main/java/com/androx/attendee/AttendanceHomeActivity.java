@@ -42,34 +42,6 @@ public class AttendanceHomeActivity extends AppCompatActivity {
             }
         });
 
-
-        Button btn_event_home = (Button) findViewById(R.id.btn_event);
-        btn_event_home.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(AttendanceHomeActivity.this, EventHomeActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        Button btn_aboutus = (Button) findViewById(R.id.btn_aboutus);
-        btn_aboutus.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(AttendanceHomeActivity.this, AboutUs.class);
-                startActivity(intent);
-            }
-        });
-
-        Button btn_attendance = (Button) findViewById(R.id.btn_attendance);
-        btn_attendance.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(AttendanceHomeActivity.this, AttendanceHomeActivity.class);
-                startActivity(intent);
-            }
-        });
-
         saveAllAttendanceInArray();
 
         customAdapter = new CustomAdapter(AttendanceHomeActivity.this,att_id,att_name,att_dateTime,att_remark);
