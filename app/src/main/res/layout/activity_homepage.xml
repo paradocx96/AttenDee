@@ -20,11 +20,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btn_Attendee"
+        android:id="@+id/btn_Aboutus1"
         android:layout_width="225dp"
         android:layout_height="60dp"
         android:background="@drawable/button_curve"
-        android:text="@string/attendance_name"
+        android:text="@string/aboutus_name"
         android:textColor="@color/colorWhite"
         app:layout_constraintBottom_toBottomOf="@+id/imageView4"
         app:layout_constraintEnd_toEndOf="parent"
@@ -33,11 +33,11 @@
         app:layout_constraintVertical_bias="0.66" />
 
     <Button
-        android:id="@+id/btn_Aboutus1"
+        android:id="@+id/btn_Setting1"
         android:layout_width="225dp"
         android:layout_height="60dp"
         android:background="@drawable/button_curve"
-        android:text="@string/aboutus_name"
+        android:text="@string/setting_name"
         android:textColor="@color/colorWhite"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

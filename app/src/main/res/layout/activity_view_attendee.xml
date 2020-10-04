@@ -66,18 +66,33 @@
         android:id="@+id/btn_add2"
         android:layout_width="100dp"
         android:layout_height="40dp"
-        android:layout_marginTop="30dp"
         android:background="@drawable/button_curve_2nd_navi"
         android:text="@string/btn_add"
         android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.305"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_attendance2" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.402" />
+
+    <Button
+        android:id="@+id/btn_view2"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:background="@drawable/button_curve_2nd_navi"
+        android:text="@string/btn_view"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.691"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.402" />
 
     <LinearLayout
         android:layout_width="361dp"
-        android:layout_height="250dp"
+        android:layout_height="344dp"
         android:layout_marginTop="32dp"
         android:background="@color/colorWhite"
         android:orientation="vertical"
@@ -86,13 +101,23 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_attendance2">
 
+        <TextView
+            android:id="@+id/txt_EventName2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="@string/event_name_example"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="30sp" />
+
         <Button
             android:id="@+id/btn_option"
             android:layout_width="38dp"
             android:layout_height="36dp"
-            android:layout_marginStart="300dp"
             android:drawableTop="@drawable/ic_baseline_menu_24"
-            android:textColor="#000000" />
+            android:textColor="#000000"
+            android:layout_marginStart="300dp"/>
 
         <TableLayout
             android:layout_width="342dp"
