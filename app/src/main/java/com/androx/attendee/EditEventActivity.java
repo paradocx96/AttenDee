@@ -17,7 +17,7 @@ public class EditEventActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_event);
 
-        eventsButton =(Button) findViewById(R.id.events);
+       /* eventsButton =(Button) findViewById(R.id.events);
         eventsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -25,24 +25,24 @@ public class EditEventActivity extends AppCompatActivity {
             }
         });
 
-        addEventButton =(Button) findViewById(R.id.AddNewEvent);
+        addEventButton =(Button) findViewById(R.id.btn_add_editEvent);
         addEventButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 openActivityAddEvents();
             }
-        });
+        });*/
 
     }
 
-    public void openActivityEvents(){
-        Intent intent4 = new Intent(this, AddEventActivity.class);
-        startActivity(intent4);
-    }
-
-    public void openActivityAddEvents(){
-        Intent intent5 = new Intent(this, AddEventActivity.class);
-        startActivity(intent5);
-    }
+//    public void openActivityEvents(){
+//        Intent intent4 = new Intent(this, AddEventActivity.class);
+//        startActivity(intent4);
+//    }
+//
+//    public void openActivityAddEvents(){
+//        Intent intent5 = new Intent(this, AddEventActivity.class);
+//        startActivity(intent5);
+//    }
 
 }

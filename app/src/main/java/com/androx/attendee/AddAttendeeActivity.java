@@ -17,7 +17,6 @@ import java.util.Locale;
 
 public class AddAttendeeActivity extends AppCompatActivity {
 
-    private Button naviBtn;
     private EditText remarks, name;
     private Button addAttendBtn;
     private Context context;
@@ -29,9 +28,6 @@ public class AddAttendeeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_attendee);
 
-
-        naviBtn = (Button) findViewById(R.id.btn2_menu);
-
         addAttendBtn = (Button) findViewById(R.id.addPersonBtn);
         name = findViewById(R.id.editTxt_personName);
         remarks = findViewById(R.id.editTxt_remarks);
@@ -39,6 +35,15 @@ public class AddAttendeeActivity extends AppCompatActivity {
 
         context = this;
         myDatabaseHelper = new MyDatabaseHelper(context);
+
+        Button btn_attendance = (Button) findViewById(R.id.btn2_menu);
+        btn_attendance.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AddAttendeeActivity.this, AttendanceHomeActivity.class);
+                startActivity(intent);
+            }
+        });
 
         addAttendBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,8 +80,5 @@ public class AddAttendeeActivity extends AppCompatActivity {
                 }
             }
         });
-
-
-
     }
 }

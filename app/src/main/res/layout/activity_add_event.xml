@@ -30,43 +30,10 @@
         app:layout_constraintVertical_bias="0.771" />
 
     <Button
-        android:id="@+id/button6"
-        android:layout_width="124dp"
-        android:layout_height="43dp"
-        android:background="@drawable/button_curve"
-        android:text="ABOUT US"
-        android:textColor="#FFFFFF"
-        android:textColorLink="@color/colorPrimaryDark"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/button5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.2"
-        app:layout_constraintStart_toEndOf="@+id/button5"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="124dp"
-        android:layout_height="43dp"
-        android:background="@drawable/button_curve"
-        android:text="ATTENDANCE"
-        android:textColor="#FFFFFF"
-        android:textColorLink="@color/colorPrimaryDark"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.30" />
-
-    <Button
         android:id="@+id/events"
         android:layout_width="124dp"
         android:layout_height="43dp"
+        android:layout_marginTop="200dp"
         android:background="@drawable/button_curve"
         android:shadowColor="#00BCD4"
         android:text="EVENT"
@@ -74,12 +41,9 @@
         android:textColorLink="@color/colorPrimaryDark"
         android:textSize="14sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.055"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.299" />
+        app:layout_constraintTop_toTopOf="@+id/logo_view12" />
 
     <Button
         android:id="@+id/ADD"
@@ -144,37 +108,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputEditText2"
         app:layout_constraintVertical_bias="0.119" />
-
-    <Button
-        android:id="@+id/ViewEvents"
-        android:layout_width="100dp"
-        android:layout_height="40dp"
-        android:background="@drawable/button_curve_2nd_navi"
-        android:text="View"
-        android:textColor="#FFFFFF"
-        android:textColorLink="@color/colorPrimaryDark"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.684"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.402" />
-
-    <Button
-        android:id="@+id/AddNewEvent"
-        android:layout_width="100dp"
-        android:layout_height="40dp"
-        android:background="@drawable/button_curve_2nd_navi"
-        android:text="Add"
-        android:textColor="#FFFFFF"
-        android:textColorLink="@color/colorPrimaryDark"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.311"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.402" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
