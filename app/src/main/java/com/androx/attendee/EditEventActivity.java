@@ -18,8 +18,6 @@ public class EditEventActivity extends AppCompatActivity {
     private Button eventsButton;
     private Button attendance;
     private Button aboutUs;
-    private Button addEventButton;
-    private Button viewEventButton;
     private Button update;
     private EditText name, date, remarks;
     private Context context;
@@ -30,11 +28,10 @@ public class EditEventActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_event);
 
-        eventsButton = (Button) findViewById(R.id.events);
+        eventsButton = (Button) findViewById(R.id.event);
         attendance = (Button) findViewById(R.id.button5);
-        aboutUs = (Button) findViewById(R.id.button6);
-        addEventButton = (Button) findViewById(R.id.AddNewEvent);
-        viewEventButton = (Button) findViewById(R.id.ViewEvents);
+        aboutUs = (Button) findViewById(R.id.btn_Aboutus1);
+
         update = (Button) findViewById(R.id.updateEvent);
         name = findViewById(R.id.textInputEditText2);
         date = findViewById(R.id.editTextDate);
@@ -43,8 +40,7 @@ public class EditEventActivity extends AppCompatActivity {
         context = this;
         myDatabaseHelper = new MyDatabaseHelper(context);
 
-        final String id = getIntent().getStringExtra("id1");
-        System.out.println(id);
+        final String id = getIntent().getStringExtra("id");
 
         Event event = myDatabaseHelper.getSingleEvent(Integer.parseInt(id));
 
@@ -54,7 +50,7 @@ public class EditEventActivity extends AppCompatActivity {
         eventsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(EditEventActivity.this, AddEventActivity.class));
+                startActivity(new Intent(EditEventActivity.this, EventHomeActivity.class));
             }
         });
 
@@ -68,21 +64,7 @@ public class EditEventActivity extends AppCompatActivity {
         aboutUs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(EditEventActivity.this, HomepageActivity.class));
-            }
-        });
-
-        addEventButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(EditEventActivity.this, AddEventActivity.class));
-            }
-        });
-
-        viewEventButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(EditEventActivity.this, ViewEventActivity.class));
+                startActivity(new Intent(EditEventActivity.this, AboutUs.class));
             }
         });
 
@@ -91,14 +73,13 @@ public class EditEventActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 String eventName = name.getText().toString();
-                SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy/MM/dd", Locale.getDefault());
-                String eventDate = simpleDateFormat.format(new Date());
+                String eventDate = date.getText().toString();
                 String eventRemarks = remarks.getText().toString();
 
                     Event event = new Event(Integer.parseInt(id),eventName, eventDate, eventRemarks);
                     myDatabaseHelper.updateEvent(event);
 
-                    startActivity(new Intent(EditEventActivity.this, AddEventActivity.class));
+                    startActivity(new Intent(EditEventActivity.this, EventHomeActivity.class));
             }
         });
     }

@@ -36,6 +36,7 @@ public class OptionEventActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(OptionEventActivity.this, EditEventActivity.class);
+                intent.putExtra("id", id);
                 startActivity(intent);
             }
         });

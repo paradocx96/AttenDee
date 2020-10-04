@@ -35,7 +35,6 @@ public class EditAttendeeActivity extends AppCompatActivity {
         myDatabaseHelper = new MyDatabaseHelper(context);
 
         final String id = getIntent().getStringExtra("id1");
-        System.out.println(id);
 
         Attendance attendance = myDatabaseHelper.getSingleAttendance(Integer.parseInt(id));
 

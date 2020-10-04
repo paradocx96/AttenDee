@@ -36,22 +36,6 @@
         app:layout_constraintVertical_bias="0.30" />
 
     <Button
-        android:id="@+id/btn_view6"
-        android:layout_width="100dp"
-        android:layout_height="40dp"
-        android:background="@drawable/button_curve_2nd_navi"
-        android:text="View"
-        android:textColor="#FAFAFA"
-        android:textColorLink="@color/colorPrimaryDark"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.691"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.4" />
-
-    <Button
         android:id="@+id/btn_Aboutus1"
         android:layout_width="124dp"
         android:layout_height="43dp"
@@ -104,26 +88,12 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.85" />
 
-    <Button
-        android:id="@+id/btn_add_editEvent"
-        android:layout_width="100dp"
-        android:layout_height="40dp"
-        android:background="@drawable/button_curve_2nd_navi"
-        android:text="Add"
-        android:textColor="#FAFAFA"
-        android:textColorLink="@color/colorPrimaryDark"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.315"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.4" />
-
     <EditText
         android:id="@+id/editTextTextMultiLine"
         android:layout_width="306dp"
         android:layout_height="44dp"
+        android:layout_marginTop="32dp"
+        android:background="@color/colorWhite"
         android:ems="10"
         android:gravity="start|top"
         android:hint="@string/event_remark"
@@ -131,7 +101,7 @@
         android:textColor="#000000"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextDate" />
 
@@ -142,6 +112,7 @@
         android:hint="@string/new_event_name"
         android:scrollbarThumbHorizontal="@drawable/custom_button"
         android:textColor="#000000"
+        android:background="@color/colorWhite"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -159,6 +130,7 @@
         android:inputType="date"
         android:textColor="#000000"
         android:textStyle="bold"
+        android:background="@color/colorWhite"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.49"
