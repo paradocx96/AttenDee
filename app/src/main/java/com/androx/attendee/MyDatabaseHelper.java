@@ -39,9 +39,7 @@ class MyDatabaseHelper extends SQLiteOpenHelper {
                 + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + COLUMN_PNAME + " TEXT, "
                 + COLUMN_DATE_TIME + " TEXT, "
-                + COLUMN_REMARKS + " TEXT,"
-                + COLUMN_EVNT_ID + " INTEGER" +
-                ");";
+                + COLUMN_REMARKS + " TEXT);";
 
         String eventQuery = "CREATE TABLE " + EVENT_TABLE_NAME + " " +
                 "("
