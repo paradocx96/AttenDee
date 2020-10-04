@@ -14,7 +14,7 @@ import android.widget.Toast;
 
 public class OptionAttendeeActivity extends AppCompatActivity {
 
-    TextView att_id, att_name;
+    TextView att_name;
     String id, name;
     Button btn_Option_Edit, btn_Option_Delete, btn_Option_Close;
 

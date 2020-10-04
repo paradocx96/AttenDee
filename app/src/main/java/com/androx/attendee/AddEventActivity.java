@@ -60,7 +60,7 @@ public class AddEventActivity extends AppCompatActivity {
                     Event event = new Event(eventName, eventDate, eventRemarks);
                     myDatabaseHelper.addEvent(event);
 
-                    startActivity(new Intent(AddEventActivity.this, AddEventActivity.class));
+                    startActivity(new Intent(AddEventActivity.this, EventHomeActivity.class));
                 }
             }
         });

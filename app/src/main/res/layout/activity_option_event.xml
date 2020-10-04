@@ -29,20 +29,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.771" />
 
-    <Button
-        android:id="@+id/btn_add5"
-        android:layout_width="100dp"
-        android:layout_height="40dp"
-        android:background="@drawable/button_curve_2nd_navi"
-        android:text="@string/btn_add"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.305"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.402" />
-
     <TextView
         android:id="@+id/txt_EventName6"
         android:layout_width="wrap_content"
@@ -56,20 +42,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.518" />
-
-    <Button
-        android:id="@+id/btn_view5"
-        android:layout_width="100dp"
-        android:layout_height="40dp"
-        android:background="@drawable/button_curve_2nd_navi"
-        android:text="@string/btn_view"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.691"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.402" />
 
     <Button
         android:id="@+id/btn_attendance5"
