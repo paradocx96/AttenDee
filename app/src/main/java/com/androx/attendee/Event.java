@@ -20,6 +20,9 @@ public class Event {
     }
 
     public Event(String name, String date, String remarks) {
+        this.name = name;
+        this.date = date;
+        this.remarks = remarks;
     }
 
 

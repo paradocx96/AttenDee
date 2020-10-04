@@ -189,7 +189,7 @@ class MyDatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase sQLiteDatabase = getWritableDatabase();
 
         Cursor cursor = sQLiteDatabase.query(EVENT_TABLE_NAME, new String[]{COLUMN_EVNT_ID,COLUMN_EVNT_NAME,COLUMN_DATE,COLUMN_EVENT_REMARKS},
-                COLUMN_ID + "= ?",new String[]{String.valueOf(id)},
+                COLUMN_EVNT_ID + "= ?",new String[]{String.valueOf(id)},
                 null,null,null);
 
         Event event;

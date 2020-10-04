@@ -22,7 +22,7 @@ public class HomepageActivity extends AppCompatActivity {
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomepageActivity.this, EventHomeActivity.class);
+                Intent intent = new Intent(HomepageActivity.this, AddEventActivity.class);
                 startActivity(intent);
             }
         });
