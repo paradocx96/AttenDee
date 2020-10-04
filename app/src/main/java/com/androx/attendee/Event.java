@@ -9,9 +9,6 @@ public class Event {
     private String date;
     private String remarks;
 
-    public Event() {
-    }
-
     public Event(int id, String name, String date, String remarks) {
         this.id = id;
         this.name = name;
@@ -20,6 +17,9 @@ public class Event {
     }
 
     public Event(String name, String date, String remarks) {
+        this.name = name;
+        this.date = date;
+        this.remarks = remarks;
     }
 
 

@@ -63,29 +63,14 @@
         android:id="@+id/btn_add"
         android:layout_width="100dp"
         android:layout_height="40dp"
+        android:layout_marginTop="30dp"
         android:background="@drawable/button_curve_2nd_navi"
         android:text="@string/btn_add"
         android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.305"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.402" />
-
-    <Button
-        android:id="@+id/btn_view"
-        android:layout_width="100dp"
-        android:layout_height="40dp"
-        android:background="@drawable/button_curve_2nd_navi"
-        android:text="@string/btn_view"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.691"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.402" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_attendance" />
 
     <LinearLayout
         android:layout_width="378dp"
@@ -94,39 +79,29 @@
         android:layout_marginTop="18dp"
         android:layout_marginEnd="17dp"
         android:layout_marginBottom="16dp"
+        android:background="@color/colorWhite"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_add"
-        android:background="@color/colorWhite">
-
-        <TextView
-            android:id="@+id/txt_EventName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/event_name_example"
-            android:textColor="#000000"
-            android:textSize="30sp"
-            android:layout_marginTop="10dp"
-            android:textAlignment="center"/>
+        app:layout_constraintTop_toBottomOf="@+id/btn_add">
 
         <TextView
             android:id="@+id/attendee_list_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/table_filed_name"
-            android:textColor="#000000"
-            android:textSize="18sp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
-            android:textAlignment="center"/>
+            android:text="@string/table_filed_name"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="25sp" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/attendanceList"
             android:layout_width="match_parent"
-            android:layout_height="287dp"
-            android:layout_marginTop="10dp"/>
+            android:layout_height="317dp"
+            android:layout_marginTop="10dp" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
