@@ -14,8 +14,8 @@ class MyDatabaseHelper extends SQLiteOpenHelper {
     private Context context;
     private static final String DATABASE_NAME = "attendee";
     private static final int DATABASE_VERSION = 1;
-
     private static final String TABLE_NAME = "attendance";
+
     private static final String COLUMN_ID = "id";
     private static final String COLUMN_PNAME = "person_name";
     private static final String COLUMN_DATE_TIME = "date_time";
@@ -39,8 +39,7 @@ class MyDatabaseHelper extends SQLiteOpenHelper {
                 + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + COLUMN_PNAME + " TEXT, "
                 + COLUMN_DATE_TIME + " TEXT, "
-                + COLUMN_REMARKS + " TEXT,"
-                + COLUMN_EVNT_ID + " INTEGER" +
+                + COLUMN_REMARKS + " TEXT" +
                 ");";
 
         String eventQuery = "CREATE TABLE " + EVENT_TABLE_NAME + " " +
@@ -77,18 +76,6 @@ class MyDatabaseHelper extends SQLiteOpenHelper {
             Toast.makeText(context, "Added Successfully!", Toast.LENGTH_SHORT).show();
         }
         db.close();
-    }
-
-    Cursor getAllAttendance() { // IT19180526
-
-        String query = "SELECT * FROM " + TABLE_NAME;
-        Cursor cursor = null;
-        SQLiteDatabase db = this.getReadableDatabase();
-
-        if (db != null) {
-            cursor = db.rawQuery(query, null);
-        }
-        return cursor;
     }
 
     public Attendance getSingleAttendance(int id){
@@ -138,6 +125,18 @@ class MyDatabaseHelper extends SQLiteOpenHelper {
 
     }
 
+    Cursor getAllAttendance() { // IT19180526
+
+        String query = "SELECT * FROM " + TABLE_NAME;
+        Cursor cursor = null;
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        if (db != null) {
+            cursor = db.rawQuery(query, null);
+        }
+        return cursor;
+    }
+
     void deleteSingleAttendee(String row_id) { // IT19180526
         SQLiteDatabase db =  this.getWritableDatabase();
         long result = db.delete(TABLE_NAME," id=?", new String[]{String.valueOf(row_id)});
@@ -154,7 +153,7 @@ class MyDatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("DELETE FROM " + TABLE_NAME);
     }
 
-    //IT19136820------------------------------------------------------------------------------------------------------------------
+    //IT19136820-----------------------------------------------------------------
     public void addEvent(Event event) {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
@@ -170,18 +169,6 @@ class MyDatabaseHelper extends SQLiteOpenHelper {
             Toast.makeText(context, "Added!", Toast.LENGTH_SHORT).show();
         }
         sqLiteDatabase.close();
-    }
-
-    Cursor getAllEvents() {
-
-        String query = "SELECT * FROM " + EVENT_TABLE_NAME;
-        Cursor cursor = null;
-        SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
-
-        if (sqLiteDatabase != null) {
-            cursor = sqLiteDatabase.rawQuery(query, null);
-        }
-        return cursor;
     }
 
     public Event getSingleEvent(int id){
@@ -231,6 +218,18 @@ class MyDatabaseHelper extends SQLiteOpenHelper {
 
     }
 
+    Cursor getAllEvents() {
+
+        String query = "SELECT * FROM " + EVENT_TABLE_NAME;
+        Cursor cursor = null;
+        SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
+
+        if (sqLiteDatabase != null) {
+            cursor = sqLiteDatabase.rawQuery(query, null);
+        }
+        return cursor;
+    }
+
     void deleteSingleEvent(String row_id) {
         SQLiteDatabase sqLiteDatabase =  this.getWritableDatabase();
         long result = sqLiteDatabase.delete(EVENT_TABLE_NAME," id=?", new String[]{String.valueOf(row_id)});
@@ -240,10 +239,5 @@ class MyDatabaseHelper extends SQLiteOpenHelper {
         } else {
             Toast.makeText(context,"Deleted!", Toast.LENGTH_SHORT).show();
         }
-    }
-
-    void deleteAllEvents() {
-        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
-        sqLiteDatabase.execSQL("DELETE FROM " + TABLE_NAME);
-}
+    } 
 }

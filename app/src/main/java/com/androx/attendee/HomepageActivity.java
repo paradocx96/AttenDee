@@ -17,7 +17,7 @@ public class HomepageActivity extends AppCompatActivity {
 
         Button btn1 = (Button) findViewById(R.id.btn_Event1);
         Button btn2 = (Button) findViewById(R.id.btn_Aboutus1);
-        Button btn3 = (Button) findViewById(R.id.btn_Setting1);
+        Button btn3 = (Button) findViewById(R.id.btn_Attendee);
 
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -30,7 +30,7 @@ public class HomepageActivity extends AppCompatActivity {
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(HomepageActivity.this, AddAttendeeActivity.class));
+                startActivity(new Intent(HomepageActivity.this, AboutUs.class));
             }
         });
 
