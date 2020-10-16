@@ -41,7 +41,7 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.518" />
+        app:layout_constraintVertical_bias="0.594" />
 
     <Button
         android:id="@+id/btn_attendance5"
@@ -60,16 +60,15 @@
         android:id="@+id/btn_aboutus5"
         android:layout_width="124dp"
         android:layout_height="43dp"
-        android:layout_marginTop="172dp"
         android:background="@drawable/button_curve"
         android:text="@string/aboutus_name"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.944"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.06" />
+        app:layout_constraintHorizontal_bias="0.888"
+        app:layout_constraintStart_toStartOf="@+id/btn_attendance5"
+        app:layout_constraintTop_toTopOf="@+id/btn_attendance5"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/btn_event5"
@@ -93,10 +92,10 @@
         android:textColor="#040404"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.905"
+        app:layout_constraintHorizontal_bias="0.875"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.625" />
+        app:layout_constraintVertical_bias="0.539" />
 
     <Button
         android:id="@+id/btn_edit_opt2"
@@ -110,7 +109,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.734" />
+        app:layout_constraintVertical_bias="0.698" />
 
     <Button
         android:id="@+id/btn_delete_opt2"
@@ -124,5 +123,5 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.823" />
+        app:layout_constraintVertical_bias="0.782" />
 </androidx.constraintlayout.widget.ConstraintLayout>

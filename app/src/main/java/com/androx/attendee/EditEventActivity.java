@@ -32,9 +32,9 @@ public class EditEventActivity extends AppCompatActivity {
 
         eventsButton = (Button) findViewById(R.id.events);
         attendance = (Button) findViewById(R.id.button5);
-        aboutUs = (Button) findViewById(R.id.button6);
-        addEventButton = (Button) findViewById(R.id.AddNewEvent);
-        viewEventButton = (Button) findViewById(R.id.ViewEvents);
+        aboutUs = (Button) findViewById(R.id.btn_Aboutus1);
+        addEventButton = (Button) findViewById(R.id.btn_add_editEvent);
+        viewEventButton = (Button) findViewById(R.id.btn_view6);
         update = (Button) findViewById(R.id.updateEvent);
         name = findViewById(R.id.textInputEditText2);
         date = findViewById(R.id.editTextDate);
@@ -43,7 +43,7 @@ public class EditEventActivity extends AppCompatActivity {
         context = this;
         myDatabaseHelper = new MyDatabaseHelper(context);
 
-        final String id = getIntent().getStringExtra("id1");
+        final String id = getIntent().getStringExtra("id");
         System.out.println(id);
 
         Event event = myDatabaseHelper.getSingleEvent(Integer.parseInt(id));

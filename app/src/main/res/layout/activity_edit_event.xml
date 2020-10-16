@@ -124,6 +124,7 @@
         android:id="@+id/editTextTextMultiLine"
         android:layout_width="306dp"
         android:layout_height="44dp"
+        android:layout_marginTop="20dp"
         android:ems="10"
         android:gravity="start|top"
         android:hint="@string/event_remark"
@@ -131,7 +132,7 @@
         android:textColor="#000000"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextDate" />
 
@@ -164,6 +165,6 @@
         app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputEditText2"
-        app:layout_constraintVertical_bias="0.004" />
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

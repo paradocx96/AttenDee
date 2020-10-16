@@ -20,8 +20,8 @@
 
     <TextView
         android:id="@+id/recBox4"
-        android:layout_width="361dp"
-        android:layout_height="280dp"
+        android:layout_width="353dp"
+        android:layout_height="355dp"
         android:background="@drawable/box"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -61,7 +61,7 @@
         app:layout_constraintHorizontal_bias="0.829"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/logo_view12"
-        app:layout_constraintVertical_bias="0.93" />
+        app:layout_constraintVertical_bias="0.96" />
 
     <EditText
         android:id="@+id/editTextTextMultiLine"
@@ -108,5 +108,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputEditText2"
         app:layout_constraintVertical_bias="0.119" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ADD NEW EVENT"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textInputEditText2"
+        app:layout_constraintEnd_toEndOf="@+id/textInputEditText2"
+        app:layout_constraintStart_toStartOf="@+id/textInputEditText2"
+        app:layout_constraintTop_toTopOf="@+id/recBox4"
+        app:layout_constraintVertical_bias="0.456" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

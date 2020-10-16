@@ -195,17 +195,17 @@ class MyDatabaseHelper extends SQLiteOpenHelper {
         return null;
     }
 
-    public int updateEvent(Event event){
+  public int updateEvent(Event event){
 
         SQLiteDatabase sqLiteDatabase = getWritableDatabase();
         ContentValues contentValues = new ContentValues();
 
+        contentValues.put(COLUMN_EVNT_ID, event.getId());
         contentValues.put(COLUMN_EVNT_NAME, event.getName());
         contentValues.put(COLUMN_DATE, event.getDate());
         contentValues.put(COLUMN_EVENT_REMARKS, event.getRemarks());
 
-        int result = sqLiteDatabase.update(EVENT_TABLE_NAME, contentValues,COLUMN_EVNT_ID+"=?",
-                new String[]{String.valueOf(event.getId())});
+        int result = sqLiteDatabase.update(EVENT_TABLE_NAME, contentValues, "id=?", new String[]{String.valueOf(event.getId())});
 
         if(result == -1){
             Toast.makeText(context, "Failed!", Toast.LENGTH_SHORT).show();

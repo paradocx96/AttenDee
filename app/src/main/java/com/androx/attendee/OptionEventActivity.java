@@ -13,7 +13,7 @@ import android.widget.TextView;
 public class OptionEventActivity extends AppCompatActivity {
 
     TextView eve_name;
-    String id, name;
+    String id, name, date, remark;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +28,8 @@ public class OptionEventActivity extends AppCompatActivity {
         if (bundle != null) {
             id = bundle.getString("id");
             name = bundle.getString("name");
-            eve_name.setText(name);
+            date = bundle.getString("date");
+            remark = bundle.getString("remark");
         }
 
         Button btn1 = (Button) findViewById(R.id.btn_edit_opt2);
