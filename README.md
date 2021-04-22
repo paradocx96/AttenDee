@@ -9,7 +9,7 @@ AttenDee is a mobile application developed to keep track of the number of people
 [![AttenDee](https://github.com/paradocx96/AttenDee/blob/master/Images/Video.png)](https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:6721881752723312640?compact=1 "AttenDee")
 
 # Group Members
-1. Chandrasiri S. A. N. L. D. 
+1. Chandrasiri S. A. N. L. D. (IT19180526)
 2. Galagoda R. R. P. W. M. R. V. N.	(IT19165394) 
 3. Senevirathne D. R. E. S.	(IT19136820) 
 4. Malwatta H. G. (IT19240848)
